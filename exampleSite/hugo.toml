@@ -1,0 +1,25 @@
+# baseURL = "https://example.com/"
+languageCode = "en-us"
+title = "Modus"
+copyright = "Copyright &copy; 2024 Modus contributors."
+theme = "modus"
+enableRobotsTXT = true
+
+[params]
+description = "A Hugo theme inspired by [Modus themes](https://protesilaos.com/emacs/modus-themes)."
+
+[menus]
+  [[menus.main]]
+  name = "Home"
+  url = "/"
+  weight = 10
+
+  [[menus.social]]
+  name = "GitHub"
+  url = "https://github.com"
+  weight = 10
+
+  [[menus.social]]
+  name = "SourceHut"
+  url = "https://sr.ht"
+  weight = 20

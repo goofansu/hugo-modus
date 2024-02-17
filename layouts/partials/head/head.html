@@ -1,0 +1,39 @@
+<head>
+  <meta charset="utf-8">
+  <title>
+    {{- if .IsHome -}}
+      {{ .Site.Title }}
+    {{- else if .IsPage -}}
+      {{ .Title }} - {{ .Site.Title }}
+    {{- end -}}
+  </title>
+
+  <meta
+    name="description"
+    content="{{- with .Description -}}
+      {{ . }}
+    {{- else -}}
+      {{- if .IsPage -}}
+        {{ .Summary }}
+      {{- else -}}
+        {{- with .Site.Params.description -}}{{ . }}{{- end -}}
+      {{- end -}}
+    {{- end -}}"
+  />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+
+  <link rel="canonical" href="{{ .Permalink }}">
+
+  {{ $style := resources.Get "css/dist/main.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+
+  {{ template "_internal/opengraph.html" . }}
+  {{ partial "head/favicon.html" . }}
+
+  {{ with .OutputFormats.Get "rss" }}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ end }}
+</head>

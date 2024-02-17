@@ -1,0 +1,13 @@
+<div class="infobar-header">
+  {{ if .IsHome }}
+  <a href={{ .Site.BaseURL }}>
+    {{ .Site.BaseURL | replaceRE "^https?://" "" | strings.TrimSuffix "/" }}
+  </a>
+  <br>
+  <small>Home page</small>
+  {{ else }}
+  <a href={{ .Site.BaseURL }}>
+    {{ .Site.Title }}
+  </a>
+  {{ end }}
+</div>

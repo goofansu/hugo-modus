@@ -1,0 +1,17 @@
+<div class="infobar-menu">
+  <nav class="infobar-navigation">
+    <ul>
+      {{ range .Site.Menus.main }}
+      <li>
+        <a href="{{ .URL }}">{{ .Name }}</a>
+      </li>
+      {{ end }}
+
+      {{ range .Site.Menus.social }}
+      <li>
+        <a href="{{ .URL }}" target="_blank" rel="me noopener noreferrer">{{ .Name }}</a>
+      </li>
+      {{ end }}
+    </ul>
+  </nav>
+</div>

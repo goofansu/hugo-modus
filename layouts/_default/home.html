@@ -1,0 +1,30 @@
+{{ define "main" }}
+<div class="post">
+  <div class="post-header">
+    <h1>{{ .Site.Title }}</h1>
+  </div>
+  
+  <div class="index-wrapper">
+    <div class="index index-blog">
+      <p>
+        {{ .Site.Params.Description | emojify | markdownify }}
+      </p>
+    </div>
+  
+    <div class="index index-blog">
+      <ul class="list-none p-0 m-0 space-y-4">
+        {{ range where .Site.RegularPages "Section" "posts" }}
+        <li class="index-blog-post-container">
+          <time class="index-blog-post-timestamp">
+            {{ .Date.Format "2006-01-02" }}
+          </time>
+          <a href={{ .Permalink }} class="table-cell">
+            <span>{{ .Title }}</span>
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+</div>
+{{ end }}

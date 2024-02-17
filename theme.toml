@@ -1,0 +1,18 @@
+name = "modus"
+license = "MIT"
+licenselink = "https://git.sr.ht/~goofansu/hugo-modus/tree/main/item/LICENSE"
+description = "A Hugo theme inspired by Modus themes."
+
+# The home page of the theme, where the source can be found
+homepage = "https://git.sr.ht/~goofansu/hugo-modus"
+
+# If you have a running demo of the theme
+demosite = "https://yejun.dev"
+
+# Taxonomy terms
+tags = ["blog", "personal", "responsive", "light", "dark"]
+features = ["minimalist", "readability"]
+
+[author]
+  name = "Yejun Su"
+  homepage = "https://yejun.dev"

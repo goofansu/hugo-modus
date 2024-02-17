@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{ partial "head/head.html" . }}
+
+  <body class="flex flex-col">
+    {{ partial "infobar/infobar.html" . }}
+
+    <main>
+      <div class="container">
+        {{ block "main" . }}
+        {{ end }}
+      </div>
+    </main>
+
+    {{ partial "footer/footer.html" . }}
+  </body>
+</html>
