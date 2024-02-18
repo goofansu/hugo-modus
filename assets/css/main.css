@@ -197,7 +197,7 @@
   }
 
   .post-header {
-    @apply mb-2 pb-6;
+    @apply p-0 xl:pb-6;
   }
 
   .post-header-post-timestamp {
