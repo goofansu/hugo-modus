@@ -88,12 +88,18 @@
   }
 
   ul, ol {
-    @apply m-0 mb-6 pl-6;
+    @apply m-0 mb-6 p-0 pl-6;
   }
 
   ul ul,
   ol ul {
     @apply list-circle;
+  }
+
+  li+li,
+  li lu,
+  li ol {
+    @apply mt-2;
   }
 
   p {
@@ -167,11 +173,11 @@
   }
 
   .infobar-navigation ul {
-    @apply m-0 p-0 space-x-2 xl:space-x-0;
+    @apply m-0 p-0;
   }
 
   .infobar-navigation ul li {
-    @apply inline-block xl:block;
+    @apply inline-block mr-2 xl:block;
   }
 
   .index-blog {
