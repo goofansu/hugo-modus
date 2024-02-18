@@ -23,3 +23,8 @@ description = "A Hugo theme inspired by [Modus themes](https://protesilaos.com/e
   name = "SourceHut"
   url = "https://sr.ht"
   weight = 20
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+    style = ''
