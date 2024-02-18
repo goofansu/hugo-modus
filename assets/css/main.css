@@ -121,6 +121,10 @@
       border-l-2 border-dashed border-black-alt;
   }
 
+  time {
+    @apply tabular-nums;
+  }
+
   pre {
     @apply mb-6 p-4 w-full bg-bgdim text-sm font-mono overflow-x-auto 
       border-y-4 border-solid border-white-alt dark:border-black-alt;
@@ -175,8 +179,11 @@
   }
 
   .index-blog-post-timestamp {
-    @apply table-cell min-w-24;
-    font-family: sans-serif;
+    @apply inline text-black-alt dark:text-white-alt font-sans mr-2 xl:min-w-28 xl:table-cell xl:m-0 xl:pr-4;
+  }
+
+  .index-blog-post-link {
+    @apply inline xl:table-cell;
   }
 
   .post {
