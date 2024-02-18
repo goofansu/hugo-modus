@@ -40,3 +40,11 @@ hugo server --disableFastRender
 2. Generate favicon using [Favicon Generator](https://realfavicongenerator.net/).
 3. Download the favicon package and unzip it, put all files to `static` directory.
 4. Put generated HTML code to `layouts/partials/head/favicon.html`.
+
+## Development
+
+```shell
+git clone https://git.sr.ht/~goofansu/hugo-modus
+cd hugo-modus
+make dev
+```
