@@ -964,7 +964,6 @@ pre {
 .index-blog-post-timestamp {
   margin-right: 0.5rem;
   display: inline;
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --tw-text-opacity: 1;
   color: rgb(var(--modus-themes-color-black-alt) / var(--tw-text-opacity));
 }

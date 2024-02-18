@@ -179,7 +179,7 @@
   }
 
   .index-blog-post-timestamp {
-    @apply inline text-black-alt dark:text-white-alt font-sans mr-2 xl:min-w-28 xl:table-cell xl:m-0 xl:pr-4;
+    @apply inline text-black-alt dark:text-white-alt mr-2 xl:min-w-28 xl:table-cell xl:m-0 xl:pr-4;
   }
 
   .index-blog-post-link {
