@@ -1007,13 +1007,7 @@ pre {
 }
 
 .post-header {
-  padding: 0px;
-}
-
-@media (min-width: 1280px) {
-  .post-header {
-    padding-bottom: 1.5rem;
-  }
+  padding-bottom: 1.5rem;
 }
 
 .post-header-post-timestamp {
