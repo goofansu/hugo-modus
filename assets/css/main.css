@@ -122,6 +122,10 @@
       focus:visited:bg-cyan-alt;
   }
 
+  a[target="_blank"] {
+    @apply after:content-['↗'] after:ml-1 after:text-sm;
+  }
+
   blockquote {
     @apply m-0 pl-6 xl:pl-8
       border-l-2 border-dashed border-black-alt;
