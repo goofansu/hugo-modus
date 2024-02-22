@@ -147,11 +147,11 @@
 
 @layer components {
   .container {
-    @apply mx-auto my-6 max-w-2xl xl:max-w-5xl xl:ml-to-infobar;
+    @apply mx-auto my-6 max-w-2xl xl:max-w-3xl xl:ml-to-infobar;
   }
 
   .footer {
-    @apply mx-auto p-4 max-w-2xl xl:max-w-5xl xl:ml-to-infobar
+    @apply mx-auto p-4 max-w-2xl xl:max-w-3xl xl:ml-to-infobar
       text-sm text-black-alt dark:text-white-alt;
   }
 
@@ -197,7 +197,7 @@
   }
 
   .post {
-    @apply mx-auto p-4 max-w-2xl xl:max-w-5xl;
+    @apply mx-auto p-4 max-w-2xl xl:max-w-3xl;
   }
 
   .post-header {
@@ -209,7 +209,7 @@
   }
 
   .post-footer {
-    @apply mx-auto p-4 max-w-2xl xl:max-w-5xl;
+    @apply mx-auto p-4 max-w-2xl xl:max-w-3xl;
   }
 
   .nextprev {

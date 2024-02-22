@@ -843,7 +843,7 @@ pre {
 
 @media (min-width: 1280px) {
   .container {
-    max-width: 64rem;
+    max-width: 48rem;
     margin-left: calc(20% + 3.6rem);
   }
 }
@@ -861,7 +861,7 @@ pre {
 
 @media (min-width: 1280px) {
   .footer {
-    max-width: 64rem;
+    max-width: 48rem;
     margin-left: calc(20% + 3.6rem);
   }
 }
@@ -1002,7 +1002,7 @@ pre {
 
 @media (min-width: 1280px) {
   .post {
-    max-width: 64rem;
+    max-width: 48rem;
   }
 }
 
@@ -1031,7 +1031,7 @@ pre {
 
 @media (min-width: 1280px) {
   .post-footer {
-    max-width: 64rem;
+    max-width: 48rem;
   }
 }
 
