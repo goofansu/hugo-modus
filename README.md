@@ -9,7 +9,7 @@ A Hugo theme inspired by [Modus themes](https://protesilaos.com/emacs/modus-them
 ```shell
 hugo new site blog
 cd blog
-git submodule add https://git.sr.ht/~goofansu/hugo-modus themes/modus
+git submodule add https://github.com/goofansu/hugo-modus.git themes/modus
 cp -r themes/modus/exampleSite/* .
 hugo server --disableFastRender
 ```
@@ -44,7 +44,7 @@ hugo server --disableFastRender
 ## Development
 
 ```shell
-git clone https://git.sr.ht/~goofansu/hugo-modus
+git clone https://github.com/goofansu/hugo-modus.git
 cd hugo-modus
 make dev
 ```
