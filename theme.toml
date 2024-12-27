@@ -7,7 +7,7 @@ description = "A Hugo theme inspired by Modus themes."
 homepage = "https://github.com/goofansu/hugo-modus"
 
 # If you have a running demo of the theme
-demosite = "https://yejun.dev"
+demosite = "https://hugo-modus.vercel.app/"
 
 # Taxonomy terms
 tags = ["blog", "personal", "responsive", "light", "dark"]
