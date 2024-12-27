@@ -1,4 +1,4 @@
-baseURL = "https://example.com/"
+baseURL = "https://hugo-modus.vercel.app/"
 languageCode = "en-us"
 title = "Modus"
 copyright = "Copyright &copy; 2024 Modus contributors."
