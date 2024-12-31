@@ -17,7 +17,7 @@ hugo server --disableFastRender
 ### Install with Nix flakes
 
 ```shell
-nix flake new -t sourcehut:~goofansu/flake-templates#hugo-modus blog
+nix flake new -t github:goofansu/flake-templates#hugo-modus blog
 cd blog
 direnv allow
 hugo new site . --force
