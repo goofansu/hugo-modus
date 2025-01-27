@@ -18,6 +18,7 @@
               hugo
               tailwindcss
               foreman
+              go
             ];
           };
       }
