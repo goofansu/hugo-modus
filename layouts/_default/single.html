@@ -17,20 +17,20 @@
 
 <div class="post-footer">
   <div class="nextprev">
-    {{ if .Next }}
+    {{ with .PrevInSection }}
     <div class="nextprev-item">
-      <span class="mr-2">Next:</span>
-      <a href="{{ .Next.RelPermalink }}">
-        {{ .Next.Title }}
+      <span class="mr-2">Previous:</span>
+      <a href="{{ .RelPermalink }}">
+        {{ .Title }}
       </a>
     </div>
     {{ end }}
 
-    {{ if .Prev }}
+    {{ with .NextInSection }}
     <div class="nextprev-item">
-      <span class="mr-2">Previous:</span>
-      <a href="{{ .Prev.RelPermalink }}">
-        {{ .Prev.Title }}
+      <span class="mr-2">Next:</span>
+      <a href="{{ .RelPermalink }}">
+        {{ .Title }}
       </a>
     </div>
     {{ end }}
