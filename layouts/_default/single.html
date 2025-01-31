@@ -1,39 +1,9 @@
 {{ define "main" }}
-<article class="post">
-  <div class="post-header">
-    <h1>{{ .Title }}</h1>
+<h1>
+  {{ .Title }}
+</h1>
 
-    <div class="post-header-meta">
-      <time class="post-header-post-timestamp">
-        {{ .Date.Format "2006-01-02" }}
-      </time>
-    </div>
-  </div>
-
-  <div class="post-body">
-    {{ .Content }}
-  </div>
+<article>
+  {{ .Content }}
 </article>
-
-<div class="post-footer">
-  <div class="nextprev">
-    {{ with .PrevInSection }}
-    <div class="nextprev-item">
-      <span class="mr-2">Previous:</span>
-      <a href="{{ .RelPermalink }}">
-        {{ .Title }}
-      </a>
-    </div>
-    {{ end }}
-
-    {{ with .NextInSection }}
-    <div class="nextprev-item">
-      <span class="mr-2">Next:</span>
-      <a href="{{ .RelPermalink }}">
-        {{ .Title }}
-      </a>
-    </div>
-    {{ end }}
-  </div>
-</div>
 {{ end }}

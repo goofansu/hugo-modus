@@ -3,239 +3,73 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --modus-themes-color-black:         0   0   0;
-    --modus-themes-color-black-alt:     89  89  89;
-    --modus-themes-color-red:           166 0   0;
-    --modus-themes-color-red-alt:       151 37  0;
-    --modus-themes-color-green:         0   104 0;
-    --modus-themes-color-green-alt:     49  101 0;
-    --modus-themes-color-yellow:        111 85  0;
-    --modus-themes-color-yellow-alt:    136 73  0;
-    --modus-themes-color-blue:          0   49  169;
-    --modus-themes-color-blue-alt:      53  79  207;
-    --modus-themes-color-magenta:       143 0   117;
-    --modus-themes-color-magenta-alt:   83  26  182;
-    --modus-themes-color-cyan:          0   94  139;
-    --modus-themes-color-cyan-alt:      0   95  95;
-    --modus-themes-color-white-alt:     240 240 240;
-    --modus-themes-color-white:         255 255 255;
-    --modus-themes-color-calm:          97  40  79;
-    --modus-themes-color-cold:          9   48  96;
-    --modus-themes-color-mild:          24  64  52;
-    --modus-themes-color-warm:          93  48  38;
-    --modus-themes-color-bgdim:         248 248 248;
-    --modus-themes-color-brandbg:       235 235 235;
-    --modus-themes-color-brandfg:       66  66  66;
-    --modus-themes-color-brandlink:     0   47  64;
+  body {
+    @apply mx-auto max-w-2xl font-serif;
   }
 
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --modus-themes-color-black:       0   0   0;
-      --modus-themes-color-black-alt:   30  30  30;
-      --modus-themes-color-red:         255 95  89;
-      --modus-themes-color-red-alt:     255 107 85;
-      --modus-themes-color-green:       68  188 68;
-      --modus-themes-color-green-alt:   112 185 0;
-      --modus-themes-color-yellow:      208 188 0;
-      --modus-themes-color-yellow-alt:  254 196 63;
-      --modus-themes-color-blue:        47  175 255;
-      --modus-themes-color-blue-alt:    121 168 255;
-      --modus-themes-color-magenta:     247 143 231;
-      --modus-themes-color-magenta-alt: 182 160 255;
-      --modus-themes-color-cyan:        0   211 208;
-      --modus-themes-color-cyan-alt:    106 228 185;
-      --modus-themes-color-white-alt:   152 152 152;
-      --modus-themes-color-white:       255 255 255;
-      --modus-themes-color-calm:        251 214 244;
-      --modus-themes-color-cold:        198 234 255;
-      --modus-themes-color-mild:        191 235 224;
-      --modus-themes-color-warm:        248 222 192;
-      --modus-themes-color-bgdim:       17  11  17;
-      --modus-themes-color-brandbg:     18  18  18;
-      --modus-themes-color-brandfg:     178 162 162;
-      --modus-themes-color-brandlink:   200 212 223;
-    }
+  nav {
+    @apply p-2 bg-cyan text-white;
   }
 
-  html {
-    @apply text-base xl:text-xl bg-white text-black dark:bg-black dark:text-white;
+  main {
+    @apply mt-6;
   }
 
-  h1, h2, h3 {
-    @apply mt-0 mb-2 p-0;
-  }
-
-  h1 {
-    @apply text-3xl font-bold;
-  }
-
-  h2 {
-    @apply text-2xl font-bold text-warm;
-  }
-
-  h3 {
-    @apply text-xl font-semibold text-cold;
-  }
-
-  ul {
-    @apply list-disc;
-  }
-
-  ol {
-    @apply list-decimal;
-  }
-
-  ul, ol {
-    @apply m-0 mb-6 p-0 pl-6;
-  }
-
-  ul ul,
-  ol ul {
-    @apply list-circle;
-  }
-
-  li+li,
-  li lu,
-  li ol {
-    @apply mt-2;
+  footer {
+    @apply mt-10 text-sm text-black-alt;
   }
 
   p {
-    @apply m-0 mb-6 p-0;
-  }
+    @apply py-2 leading-6;
 
-  hr {
-    @apply my-10;
-  }
-
-  small {
-    @apply text-xs;
-  }
-
-  a {
-    @apply underline text-blue visited:text-cyan
-      hover:no-underline hover:bg-blue-alt hover:text-white dark:hover:text-black
-      focus:no-underline focus:bg-blue-alt focus:text-white dark:focus:text-black
-      hover:visited:bg-cyan-alt
-      focus:visited:bg-cyan-alt;
-  }
-
-  a[target="_blank"] {
-    @apply after:content-['↗'] after:ml-1 after:text-sm;
-  }
-
-  blockquote {
-    @apply m-0 pl-6 xl:pl-8
-      border-l-2 border-dashed border-black-alt;
-  }
-
-  time {
-    @apply tabular-nums;
+    code {
+      @apply bg-nuanced-cyan;
+    }
   }
 
   pre {
-    @apply mb-6 p-4 w-full bg-bgdim text-sm font-mono overflow-x-auto 
-      border-y-4 border-solid border-white-alt dark:border-black-alt;
+    @apply bg-nuanced-cyan;
+
+    code {
+      @apply text-wrap;
+
+      .hl {
+        @apply border-l-4 border-intense-cyan bg-subtle-cyan;
+      }
+    }
   }
 
-  :not(pre) > code {
-    @apply inline-code;
-  }
-}
-
-@layer components {
-  .container {
-    @apply mx-auto my-6 max-w-2xl xl:max-w-3xl xl:ml-to-infobar;
+  code {
+    @apply font-mono text-sm;
   }
 
-  .footer {
-    @apply mx-auto p-4 max-w-2xl xl:max-w-3xl xl:ml-to-infobar
-      text-sm text-black-alt dark:text-white-alt;
+  h1 {
+    @apply text-2xl font-bold;
   }
 
-  .infobar {
-    @apply bg-brandbg text-brandfg xl:fixed xl:inset-y-0 xl:left-0 xl:w-1/5;
+  h2 {
+    @apply text-xl font-semibold;
   }
 
-  .infobar a {
-    @apply no-underline text-brandlink
-      hover:text-brandbg hover:bg-brandlink;
+  h3 {
+    @apply text-lg font-medium;
   }
 
-  .infobar-inner {
-    @apply mx-auto p-4 max-w-2xl xl:absolute xl:inset-x-4 xl:bottom-4;
+  ul, ol {
+    @apply list-disc mx-10;
   }
 
-  .infobar-header {
-    @apply m-0 xl:mb-6;
-  }
+  article {
+    h1, h2, h3 {
+      @apply mt-4;
+    }
 
-  .infobar-navigation {
-    @apply py-4 xl:p-0;
-  }
-
-  .infobar-navigation ul {
-    @apply m-0 p-0;
-  }
-
-  .infobar-navigation ul li {
-    @apply inline-block mr-2 xl:block;
-  }
-
-  .index-blog {
-    @apply mb-8;
-  }
-
-  .index-blog-post-timestamp {
-    @apply inline text-black-alt dark:text-white-alt mr-2 xl:min-w-28 xl:table-cell xl:m-0 xl:pr-4;
-  }
-
-  .index-blog-post-link {
-    @apply inline xl:table-cell;
-  }
-
-  .post {
-    @apply mx-auto p-4 max-w-2xl xl:max-w-3xl;
-  }
-
-  .post-header {
-    @apply pb-6;
-  }
-
-  .post-header-post-timestamp {
-    @apply text-black-alt dark:text-white-alt;
-  }
-
-  .post-footer {
-    @apply mx-auto p-4 max-w-2xl xl:max-w-3xl;
-  }
-
-  .nextprev {
-    @apply border-t border-dashed border-black-alt mt-8 py-8;
-  }
-
-  .nextprev-item {
-    @apply py-6;
+    a {
+      @apply text-cyan hover:bg-intense-cyan;
+    }
   }
 }
 
-@layer utilities {
-  .inline-code {
-    @apply text-magenta font-mono;
-  }
-
-  .ml-to-infobar {
-    margin-left: calc(theme("width.1/5") + 3.6rem);
-  }
-}
-
-.chroma .hl {
-  @apply -ml-4 -mr-4 pl-3 border-l-4
-    border-gray-400 bg-gray-200 dark:border-gray-600 dark:bg-gray-700;
-}
-
-.footnotes p {
-  @apply m-0;
+div.footnotes {
+  @apply mt-10;
 }

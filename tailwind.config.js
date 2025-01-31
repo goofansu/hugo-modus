@@ -1,64 +1,96 @@
-const colors = require("tailwindcss/colors")
+const colors = require('tailwindcss/colors')
 
 module.exports = {
-  content: ["./layouts/**/*.html"],
+  content: ['./layouts/**/*.html'],
   theme: {
-    extend: {
-      listStyleType: {
-        circle: "circle"
-      }
-    },
     colors: {
-      transparent: "transparent",
-      current: "currentColor",
-      gray: colors.gray,
-      "black": {
-        "DEFAULT": "rgb(var(--modus-themes-color-black) / <alpha-value>)",
-        "alt": "rgb(var(--modus-themes-color-black-alt) / <alpha-value>)",
+      transparent: 'transparent',
+      current: 'currentColor',
+      white: {
+        DEFAULT: '#ffffff',
+        dim: '#f0f0f0',
       },
-      "red": {
-        "DEFAULT": "rgb(var(--modus-themes-color-red) / <alpha-value>)",
-        "alt": "rgb(var(--modus-themes-color-red-alt) / <alpha-value>)",
+      black: {
+        DEFAULT: '#000000',
+        dim: '#595959',
+        alt: '#193668',
       },
-      "green": {
-        "DEFAULT": "rgb(var(--modus-themes-color-green) / <alpha-value>)",
-        "alt": "rgb(var(--modus-themes-color-green-alt) / <alpha-value>)",
+      red: {
+        DEFAULT: '#a60000',
+        warmer: '#972500',
+        cooler: '#a0132f',
+        faint: '#7f0000',
+        intense: '#d00000',
       },
-      "yellow": {
-        "DEFAULT": "rgb(var(--modus-themes-color-yellow) / <alpha-value>)",
-        "alt": "rgb(var(--modus-themes-color-yellow-alt) / <alpha-value>)",
+      green: {
+        DEFAULT: '#006800',
+        warmer: '#316500',
+        cooler: '#00663f',
+        faint: '#2a5045',
+        intense: '#008900',
       },
-      "blue": {
-        "DEFAULT": "rgb(var(--modus-themes-color-blue) / <alpha-value>)",
-        "alt": "rgb(var(--modus-themes-color-blue-alt) / <alpha-value>)",
+      yellow: {
+        DEFAULT: '#6f5500',
+        warmer: '#884900',
+        cooler: '#7a4f2f',
+        faint: '#624416',
+        intense: '#808000',
       },
-      "magenta": {
-        "DEFAULT": "rgb(var(--modus-themes-color-magenta) / <alpha-value>)",
-        "alt": "rgb(var(--modus-themes-color-magenta-alt) / <alpha-value>)",
+      blue: {
+        DEFAULT: '#0031a9',
+        warmer: '#354fcf',
+        cooler: '#0000b0',
+        faint: '#003497',
+        intense: '#0000ff',
       },
-      "cyan": {
-        "DEFAULT": "rgb(var(--modus-themes-color-cyan) / <alpha-value>)",
-        "alt": "rgb(var(--modus-themes-color-cyan-alt) / <alpha-value>)",
+      magenta: {
+        DEFAULT: '#721045',
+        warmer: '#8f0075',
+        cooler: '#531ab6',
+        faint: '#7c318f',
+        intense: '#dd22dd',
       },
-      "white": {
-        "DEFAULT": "rgb(var(--modus-themes-color-white) / <alpha-value>)",
-        "alt": "rgb(var(--modus-themes-color-white-alt) / <alpha-value>)",
+      cyan: {
+        DEFAULT: '#005e8b',
+        warmer: '#3f578f',
+        cooler: '#005f5f',
+        faint: '#005077',
+        intense: '#008899',
       },
-      "calm": "rgb(var(--modus-themes-color-calm) / <alpha-value>)",
-      "cold": "rgb(var(--modus-themes-color-cold) / <alpha-value>)",
-      "mild": "rgb(var(--modus-themes-color-mild) / <alpha-value>)",
-      "warm": "rgb(var(--modus-themes-color-warm) / <alpha-value>)",
-      "bgdim": "rgb(var(--modus-themes-color-bgdim) / <alpha-value>)",
-      "brandbg": "rgb(var(--modus-themes-color-brandbg) / <alpha-value>)",
-      "brandfg": "rgb(var(--modus-themes-color-brandfg) / <alpha-value>)",
-      "brandlink": "rgb(var(--modus-themes-color-brandlink) / <alpha-value>)",
-    }
-  },
-  variants: {
-    extend: {
-      textColor: ["visited", "hover:visited", "focus:visited"],
-      backgroundColor: ["visited", "hover:visited", "focus:visited"],
-    }
-  },
-  plugins: []
+      rust: '#8a290f',
+      gold: '#80601f',
+      olive: '#56692d',
+      slate: '#2f3f83',
+      indigo: '#4a3a8a',
+      maroon: '#731c52',
+      pink: '#7b435c',
+
+      // Background colors
+      intense: {
+        red: '#ff8f88',
+        green: '#8adf80',
+        yellow: '#f3d000',
+        blue: '#bfc9ff',
+        magenta: '#dfa0f0',
+        cyan: '#a4d5f9',
+      },
+      subtle: {
+        red: '#ffcfbf',
+        green: '#b3fabf',
+        yellow: '#fff576',
+        blue: '#ccdfff',
+        magenta: '#ffddff',
+        cyan: '#bfefff',
+      },
+      nuanced: {
+        red: '#fff1f0',
+        green: '#ecf7ed',
+        yellow: '#fff3da',
+        blue: '#f3f3ff',
+        magenta: '#fdf0ff',
+        cyan: '#ebf6fa',
+      },
+    },
+    plugins: []
+  }
 }

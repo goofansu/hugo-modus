@@ -1,17 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-  {{ partial "head/head.html" . }}
+<!doctype html>
+<html lang="{{ .Params.lang | default "en" }}">
+  <head>
+    <title>
+      {{- if .IsHome -}}
+      {{ .Site.Title }}
+      {{- else if .IsPage -}}
+      {{ .Title }} - {{ .Site.Title }}
+      {{- end -}}
+    </title>
 
-  <body class="flex flex-col">
-    {{ partial "infobar/infobar.html" . }}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="
+        {{- with .Description -}}
+          {{ . }}
+        {{- else -}}
+          {{- if .IsPage -}}
+            {{ .Summary }}
+          {{- else -}}
+            {{- with .Site.Params.description -}}{{ . }}{{- end -}}
+          {{- end -}}
+        {{- end -}}"
+    />
+    {{ template "_internal/opengraph.html" . }}
+
+    <link rel="canonical" href="{{ .Permalink }}">
+    {{ partial "favicon.html" . }}
+
+    {{ $style := resources.Get "css/dist/main.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+  </head>
+  <body>
+    <nav>
+      <h1>
+        <a href={{ .Site.BaseURL }}>
+          {{ .Site.Title }}
+        </a>
+      </h1>
+    </nav>
 
     <main>
-      <div class="container">
-        {{ block "main" . }}
-        {{ end }}
-      </div>
+      {{ block "main" . }}
+      {{ end }}
     </main>
 
-    {{ partial "footer/footer.html" . }}
+    <footer>
+      <p>
+        {{ .Site.Copyright | markdownify }}
+      </p>
+    </footer>
   </body>
 </html>
