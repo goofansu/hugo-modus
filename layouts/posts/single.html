@@ -1,12 +1,11 @@
 {{ define "main" }}
-<h1>
-  {{ .Title }}
-</h1>
-
 <article>
+  <h1>
+    {{ .Title }}
+  </h1>
+
   {{ .Content }}
 </article>
-
 
 <section class="mt-10 border-t border-dashed">
   {{ with .PrevInSection }}
