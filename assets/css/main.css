@@ -67,6 +67,10 @@
     a {
       @apply text-cyan hover:bg-intense-cyan;
     }
+
+    blockquote {
+      @apply m-0 pl-6 border-l-2 border-dashed border-black-alt;
+    }
   }
 }
 

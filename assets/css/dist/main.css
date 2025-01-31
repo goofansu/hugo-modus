@@ -654,6 +654,22 @@ article {
     --tw-bg-opacity: 1;
     background-color: rgb(164 213 249 / var(--tw-bg-opacity, 1));
   }
+  blockquote {
+    margin: 0px;
+  }
+  blockquote {
+    border-left-width: 2px;
+  }
+  blockquote {
+    border-style: dashed;
+  }
+  blockquote {
+    --tw-border-opacity: 1;
+    border-color: rgb(25 54 104 / var(--tw-border-opacity, 1));
+  }
+  blockquote {
+    padding-left: 1.5rem;
+  }
 }
 
 .mr-2 {
