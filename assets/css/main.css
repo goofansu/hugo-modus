@@ -12,7 +12,7 @@
   }
 
   main {
-    @apply mt-6;
+    @apply mt-6 p-2;
 
     a {
       @apply text-cyan hover:bg-intense-cyan;
@@ -34,7 +34,7 @@
   }
 
   footer {
-    @apply mt-10 text-sm text-black-alt;
+    @apply mt-10 p-2 text-sm text-black-alt;
   }
 
   p {

@@ -571,6 +571,7 @@ nav {
 
 main {
   margin-top: 1.5rem;
+  padding: 0.5rem;
   a {
     --tw-text-opacity: 1;
     color: rgb(0 94 139 / var(--tw-text-opacity, 1));
@@ -608,6 +609,7 @@ article {
 
 footer {
   margin-top: 2.5rem;
+  padding: 0.5rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
   --tw-text-opacity: 1;
