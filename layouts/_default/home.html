@@ -7,7 +7,7 @@
 <ul>
   {{ range where .Site.RegularPages "Section" "in" .Site.MainSections }}
   <li class="list-disc">
-    <a class="text-cyan" href={{ .RelPermalink }}>
+    <a href={{ .RelPermalink }}>
       {{ .Title }}
     </a>
   </li>

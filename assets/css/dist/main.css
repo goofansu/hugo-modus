@@ -571,6 +571,39 @@ nav {
 
 main {
   margin-top: 1.5rem;
+  a {
+    --tw-text-opacity: 1;
+    color: rgb(0 94 139 / var(--tw-text-opacity, 1));
+  }
+  a:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(164 213 249 / var(--tw-bg-opacity, 1));
+  }
+}
+
+article {
+  h1, h2, h3 {
+    margin-top: 1rem;
+  }
+  a {
+    text-decoration-line: underline;
+  }
+  blockquote {
+    margin: 0px;
+  }
+  blockquote {
+    border-left-width: 2px;
+  }
+  blockquote {
+    border-style: dashed;
+  }
+  blockquote {
+    --tw-border-opacity: 1;
+    border-color: rgb(25 54 104 / var(--tw-border-opacity, 1));
+  }
+  blockquote {
+    padding-left: 1.5rem;
+  }
 }
 
 footer {
@@ -642,36 +675,6 @@ ul, ol {
   list-style-type: disc;
 }
 
-article {
-  h1, h2, h3 {
-    margin-top: 1rem;
-  }
-  a {
-    --tw-text-opacity: 1;
-    color: rgb(0 94 139 / var(--tw-text-opacity, 1));
-  }
-  a:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(164 213 249 / var(--tw-bg-opacity, 1));
-  }
-  blockquote {
-    margin: 0px;
-  }
-  blockquote {
-    border-left-width: 2px;
-  }
-  blockquote {
-    border-style: dashed;
-  }
-  blockquote {
-    --tw-border-opacity: 1;
-    border-color: rgb(25 54 104 / var(--tw-border-opacity, 1));
-  }
-  blockquote {
-    padding-left: 1.5rem;
-  }
-}
-
 .mr-2 {
   margin-right: 0.5rem;
 }
@@ -698,11 +701,6 @@ article {
 
 .pt-6 {
   padding-top: 1.5rem;
-}
-
-.text-cyan {
-  --tw-text-opacity: 1;
-  color: rgb(0 94 139 / var(--tw-text-opacity, 1));
 }
 
 div.footnotes {

@@ -13,6 +13,24 @@
 
   main {
     @apply mt-6;
+
+    a {
+      @apply text-cyan hover:bg-intense-cyan;
+    }
+  }
+
+  article {
+    h1, h2, h3 {
+      @apply mt-4;
+    }
+
+    a {
+      @apply underline;
+    }
+
+    blockquote {
+      @apply m-0 pl-6 border-l-2 border-dashed border-black-alt;
+    }
   }
 
   footer {
@@ -57,20 +75,6 @@
 
   ul, ol {
     @apply list-disc mx-10;
-  }
-
-  article {
-    h1, h2, h3 {
-      @apply mt-4;
-    }
-
-    a {
-      @apply text-cyan hover:bg-intense-cyan;
-    }
-
-    blockquote {
-      @apply m-0 pl-6 border-l-2 border-dashed border-black-alt;
-    }
   }
 }
 
