@@ -39,6 +39,14 @@
           {{ .Site.Title }}
         </a>
       </h1>
+
+      <section>
+        {{ with .Site.Menus.main }}
+          {{ range . }}
+            <a href="{{ .URL }}" class="mr-2">{{ .Name }}</a>
+          {{ end }}
+        {{ end }}
+      </section>
     </nav>
 
     <main>

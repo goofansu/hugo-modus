@@ -4,24 +4,32 @@
 
 @layer base {
   body {
-    @apply mx-auto max-w-2xl font-serif;
+    @apply mx-auto max-w-2xl font-serif lg:text-lg;
   }
 
   nav {
-    @apply p-2 bg-cyan text-white;
+    @apply p-2 flex justify-between;
   }
 
   main {
-    @apply mt-6 p-2;
+    @apply px-2;
 
     a {
-      @apply text-cyan hover:bg-intense-cyan;
+      @apply text-cyan-warmer hover:bg-intense-cyan;
     }
   }
 
   article {
-    h1, h2, h3 {
-      @apply mt-4;
+    h1 {
+      @apply my-6 text-2xl font-bold text-black;
+    }
+
+    h2 {
+      @apply mt-6 text-xl font-bold text-yellow-faint;
+    }
+
+    h3 {
+      @apply my-6 text-lg font-semibold text-black-alt;
     }
 
     a {
@@ -34,43 +42,31 @@
   }
 
   footer {
-    @apply mt-10 p-2 text-sm text-black-alt;
+    @apply mt-10 px-2 text-black-dim;
   }
 
   p {
-    @apply py-2 leading-6;
+    @apply my-2 leading-6;
 
     code {
-      @apply bg-nuanced-cyan;
+      @apply text-magenta-warmer;
     }
   }
 
   pre {
-    @apply bg-nuanced-cyan;
+    @apply p-2 bg-[#f2f2f2];
 
     code {
       @apply text-wrap;
 
       .hl {
-        @apply border-l-4 border-intense-cyan bg-subtle-cyan;
+        @apply border-l-4 border-black-dim bg-[#bdbdbd];
       }
     }
   }
 
   code {
-    @apply font-mono text-sm;
-  }
-
-  h1 {
-    @apply text-2xl font-bold;
-  }
-
-  h2 {
-    @apply text-xl font-semibold;
-  }
-
-  h3 {
-    @apply text-lg font-medium;
+    @apply font-mono text-sm lg:text-base;
   }
 
   ul, ol {
