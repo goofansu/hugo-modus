@@ -15,11 +15,15 @@
     @apply px-4;
 
     a {
-      @apply text-operandi-blue-warmer hover:bg-operandi-intense-blue dark:text-vivendi-blue-warmer dark:hover:bg-vivendi-intense-blue;
+      @apply underline text-operandi-blue-warmer hover:bg-operandi-intense-blue dark:text-vivendi-blue-warmer dark:hover:bg-vivendi-intense-blue;
     }
   }
 
   article {
+    blockquote {
+      @apply my-6 py-2 pl-6 border-l-2 border-dashed border-operandi-black-alt;
+    }
+
     h1 {
       @apply mt-8 mb-6 text-2xl font-bold leading-tight text-operandi-black-alt dark:text-vivendi-white;
     }
@@ -30,14 +34,6 @@
 
     h3 {
       @apply mt-5 mb-3 text-lg font-semibold leading-tight text-operandi-black-alt dark:text-vivendi-blue-faint;
-    }
-
-    a {
-      @apply underline;
-    }
-
-    blockquote {
-      @apply my-6 py-2 pl-6 border-l-2 border-dashed border-operandi-black-alt;
     }
   }
 

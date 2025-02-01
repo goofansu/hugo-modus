@@ -595,6 +595,9 @@ main {
     --tw-text-opacity: 1;
     color: rgb(53 79 207 / var(--tw-text-opacity, 1));
   }
+  a {
+    text-decoration-line: underline;
+  }
   a:hover {
     --tw-bg-opacity: 1;
     background-color: rgb(191 201 255 / var(--tw-bg-opacity, 1));
@@ -614,6 +617,27 @@ main {
 }
 
 article {
+  blockquote {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  blockquote {
+    border-left-width: 2px;
+  }
+  blockquote {
+    border-style: dashed;
+  }
+  blockquote {
+    --tw-border-opacity: 1;
+    border-color: rgb(25 54 104 / var(--tw-border-opacity, 1));
+  }
+  blockquote {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  blockquote {
+    padding-left: 1.5rem;
+  }
   h1 {
     margin-top: 2rem;
   }
@@ -691,30 +715,6 @@ article {
       --tw-text-opacity: 1;
       color: rgb(130 176 236 / var(--tw-text-opacity, 1));
     }
-  }
-  a {
-    text-decoration-line: underline;
-  }
-  blockquote {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-  blockquote {
-    border-left-width: 2px;
-  }
-  blockquote {
-    border-style: dashed;
-  }
-  blockquote {
-    --tw-border-opacity: 1;
-    border-color: rgb(25 54 104 / var(--tw-border-opacity, 1));
-  }
-  blockquote {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-  blockquote {
-    padding-left: 1.5rem;
   }
 }
 
