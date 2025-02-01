@@ -4,32 +4,32 @@
 
 @layer base {
   body {
-    @apply mx-auto max-w-2xl font-serif lg:text-lg;
+    @apply mx-auto max-w-2xl py-6 font-sans lg:text-lg dark:bg-vivendi-black dark:text-vivendi-white;
   }
 
   nav {
-    @apply p-2 flex justify-between;
+    @apply px-4 py-2 flex justify-between;
   }
 
   main {
-    @apply px-2;
+    @apply px-4;
 
     a {
-      @apply text-cyan-warmer hover:bg-intense-cyan;
+      @apply text-operandi-blue-warmer hover:bg-operandi-intense-blue dark:text-vivendi-blue-warmer dark:hover:bg-vivendi-intense-blue;
     }
   }
 
   article {
     h1 {
-      @apply my-6 text-2xl font-bold text-black;
+      @apply mt-8 mb-6 text-2xl font-bold leading-tight text-operandi-black-alt dark:text-vivendi-white;
     }
 
     h2 {
-      @apply mt-6 text-xl font-bold text-yellow-faint;
+      @apply mt-6 mb-4 text-xl font-bold leading-tight text-operandi-yellow-faint dark:text-vivendi-yellow-faint;
     }
 
     h3 {
-      @apply mt-6 text-lg font-semibold text-black-alt;
+      @apply mt-5 mb-3 text-lg font-semibold leading-tight text-operandi-black-alt dark:text-vivendi-blue-faint;
     }
 
     a {
@@ -37,30 +37,30 @@
     }
 
     blockquote {
-      @apply m-0 pl-6 border-l-2 border-dashed border-black-alt;
+      @apply my-6 py-2 pl-6 border-l-2 border-dashed border-operandi-black-alt;
     }
   }
 
   footer {
-    @apply mt-10 px-2 text-black-dim;
+    @apply mt-10 p-4 text-operandi-black-dim dark:text-vivendi-white-dim;
   }
 
   p {
-    @apply my-2 leading-6;
+    @apply my-4 leading-6;
 
     code {
-      @apply text-magenta-warmer;
+      @apply text-operandi-magenta-warmer dark:text-vivendi-cyan-cooler;
     }
   }
 
   pre {
-    @apply p-2 bg-[#f2f2f2];
+    @apply p-2 bg-[#f2f2f2] dark:bg-vivendi-black-dim;
 
     code {
       @apply text-wrap;
 
       .hl {
-        @apply border-l-4 border-black-dim bg-[#bdbdbd];
+        @apply border-l-4 border-operandi-black-dim bg-[#bdbdbd] dark:border-vivendi-white-dim dark:bg-[#5a5a5a];
       }
     }
   }
@@ -70,7 +70,7 @@
   }
 
   ul, ol {
-    @apply list-disc mx-10;
+    @apply list-disc mx-6 my-4;
   }
 }
 

@@ -3,14 +3,17 @@
   <head>
     <title>
       {{- if .IsHome -}}
-      {{ .Site.Title }}
+        {{ .Site.Title }}
       {{- else if .IsPage -}}
-      {{ .Title }} - {{ .Site.Title }}
+        {{ .Title }} - {{ .Site.Title }}
       {{- end -}}
     </title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+
     <meta
       name="description"
       content="
@@ -40,13 +43,13 @@
         </a>
       </h1>
 
-      <section>
-        {{ with .Site.Menus.main }}
-          {{ range . }}
-            <a href="{{ .URL }}" class="mr-2">{{ .Name }}</a>
-          {{ end }}
+      {{ with .Site.Menus.main }}
+      <div>
+        {{ range . }}
+        <a href="{{ .URL }}" class="mr-2">{{ .Name }}</a>
         {{ end }}
-      </section>
+      </div>
+      {{ end }}
     </nav>
 
     <main>
