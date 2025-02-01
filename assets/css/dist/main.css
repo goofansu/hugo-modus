@@ -741,4 +741,11 @@ ul, ol {
 
 div.footnotes {
   margin-top: 2.5rem;
+  hr {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+  hr {
+    border-style: dashed;
+  }
 }

@@ -76,4 +76,8 @@
 
 div.footnotes {
   @apply mt-10;
+
+  hr {
+    @apply my-10 border-dashed;
+  }
 }
