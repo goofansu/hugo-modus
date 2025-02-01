@@ -37,30 +37,38 @@
   </head>
   <body>
     <nav>
-      <h1>
-        <a href={{ .Site.BaseURL }}>
-          {{ .Site.Title }}
-        </a>
-      </h1>
+      <div class="container flex justify-between">
+        <h1>
+          <a href={{ .Site.BaseURL }}>
+            {{ .Site.Title }}
+          </a>
+        </h1>
 
-      {{ with .Site.Menus.main }}
-      <div>
-        {{ range . }}
-        <a href="{{ .URL }}" class="mr-2">{{ .Name }}</a>
+        {{ with .Site.Menus.main }}
+        <ul>
+          {{ range . }}
+          <li>
+            <a href="{{ .URL }}" class="mr-2">{{ .Name }}</a>
+          </li>
+          {{ end }}
+        </ul>
         {{ end }}
       </div>
-      {{ end }}
     </nav>
 
     <main>
-      {{ block "main" . }}
-      {{ end }}
+      <div class="container">
+        {{ block "main" . }}
+        {{ end }}
+      </div>
     </main>
 
     <footer>
-      <p>
-        {{ .Site.Copyright | markdownify }}
-      </p>
+      <div class="container">
+        <p>
+          {{ .Site.Copyright | markdownify }}
+        </p>
+      </div>
     </footer>
   </body>
 </html>

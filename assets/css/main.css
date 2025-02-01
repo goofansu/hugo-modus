@@ -4,36 +4,44 @@
 
 @layer base {
   body {
-    @apply mx-auto max-w-2xl py-6 font-sans lg:text-lg dark:bg-vivendi-black dark:text-vivendi-white;
+    @apply font-sans lg:text-lg dark:bg-vivendi-black dark:text-vivendi-white;
   }
 
   nav {
-    @apply px-4 py-2 flex justify-between;
+    @apply px-4 py-2 bg-operandi-white-dim dark:bg-vivendi-black-dim;
+
+    ul {
+      @apply list-none m-0;
+    }
+
+    li {
+      @apply inline;
+    }
   }
 
   main {
-    @apply px-4;
+    @apply p-4;
 
     a {
       @apply underline text-operandi-blue-warmer hover:bg-operandi-intense-blue dark:text-vivendi-blue-warmer dark:hover:bg-vivendi-intense-blue;
     }
-  }
 
-  article {
-    blockquote {
-      @apply my-6 py-2 pl-6 border-l-2 border-dashed border-operandi-black-alt;
-    }
+    article {
+      blockquote {
+        @apply my-6 py-2 pl-6 border-l-2 border-dashed border-operandi-black-alt;
+      }
 
-    h1 {
-      @apply mt-8 mb-6 text-2xl font-bold leading-tight text-operandi-black-alt dark:text-vivendi-white;
-    }
+      h1 {
+        @apply mt-8 mb-6 text-2xl font-bold leading-tight text-operandi-black-alt dark:text-vivendi-white;
+      }
 
-    h2 {
-      @apply mt-6 mb-4 text-xl font-bold leading-tight text-operandi-yellow-faint dark:text-vivendi-yellow-faint;
-    }
+      h2 {
+        @apply mt-6 mb-4 text-xl font-bold leading-tight text-operandi-yellow-faint dark:text-vivendi-yellow-faint;
+      }
 
-    h3 {
-      @apply mt-5 mb-3 text-lg font-semibold leading-tight text-operandi-black-alt dark:text-vivendi-blue-faint;
+      h3 {
+        @apply mt-5 mb-3 text-lg font-semibold leading-tight text-operandi-black-alt dark:text-vivendi-blue-faint;
+      }
     }
   }
 
@@ -51,6 +59,12 @@
 
   code {
     @apply font-mono text-sm lg:text-base text-operandi-magenta-warmer dark:text-vivendi-magenta-warmer;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto max-w-2xl;
   }
 }
 
