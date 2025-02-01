@@ -743,12 +743,13 @@ p {
   @media (prefers-color-scheme: dark) {
     code {
       --tw-text-opacity: 1;
-      color: rgb(106 228 185 / var(--tw-text-opacity, 1));
+      color: rgb(247 143 231 / var(--tw-text-opacity, 1));
     }
   }
 }
 
 pre {
+  overflow-x: auto;
   --tw-bg-opacity: 1;
   background-color: rgb(242 242 242 / var(--tw-bg-opacity, 1));
   padding: 0.5rem;
@@ -763,9 +764,9 @@ pre {
 
 pre {
   code {
-    text-wrap: wrap;
-  }
-  code {
+    .hl {
+      margin: -0.25rem;
+    }
     .hl {
       border-left-width: 4px;
     }

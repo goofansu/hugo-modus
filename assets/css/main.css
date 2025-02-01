@@ -49,18 +49,16 @@
     @apply my-4 leading-6;
 
     code {
-      @apply text-operandi-magenta-warmer dark:text-vivendi-cyan-cooler;
+      @apply text-operandi-magenta-warmer dark:text-vivendi-magenta-warmer;
     }
   }
 
   pre {
-    @apply p-2 bg-[#f2f2f2] dark:bg-vivendi-black-dim;
+    @apply p-2 bg-[#f2f2f2] dark:bg-vivendi-black-dim overflow-x-auto;
 
     code {
-      @apply text-wrap;
-
       .hl {
-        @apply border-l-4 border-operandi-black-dim bg-[#bdbdbd] dark:border-vivendi-white-dim dark:bg-[#5a5a5a];
+        @apply -m-1 border-l-4 border-operandi-black-dim bg-[#bdbdbd] dark:border-vivendi-white-dim dark:bg-[#5a5a5a];
       }
     }
   }
