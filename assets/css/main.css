@@ -29,7 +29,7 @@
     }
 
     h3 {
-      @apply my-6 text-lg font-semibold text-black-alt;
+      @apply mt-6 text-lg font-semibold text-black-alt;
     }
 
     a {
