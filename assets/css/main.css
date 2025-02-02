@@ -79,9 +79,9 @@
   article {
     blockquote {
       @apply my-6 py-2 pl-6
-             border-l-2 border-dashed
-             border-operandi-black-alt
-             dark:border-vivendi-white-alt;
+             border-l-8 border-solid
+             border-operandi-blue-warmer
+             dark:border-vivendi-blue-warmer;
     }
 
     ul, ol {

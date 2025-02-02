@@ -725,14 +725,14 @@ article {
     margin-bottom: 1.5rem;
   }
   blockquote {
-    border-left-width: 2px;
+    border-left-width: 8px;
   }
   blockquote {
-    border-style: dashed;
+    border-style: solid;
   }
   blockquote {
     --tw-border-opacity: 1;
-    border-color: rgb(25 54 104 / var(--tw-border-opacity, 1));
+    border-color: rgb(53 79 207 / var(--tw-border-opacity, 1));
   }
   blockquote {
     padding-top: 0.5rem;
@@ -744,7 +744,7 @@ article {
   @media (prefers-color-scheme: dark) {
     blockquote {
       --tw-border-opacity: 1;
-      border-color: rgb(198 218 255 / var(--tw-border-opacity, 1));
+      border-color: rgb(121 168 255 / var(--tw-border-opacity, 1));
     }
   }
   ul, ol {
