@@ -1,9 +1,7 @@
-<div class="flex justify-between">
-  <h1>
-    <a href={{ .Site.Home }}>
-      {{ .Site.Title }}
-    </a>
-  </h1>
+<div class="flex justify-between items-center">
+  <a href={{ .Site.Home }}>
+    {{ .Site.Title }}
+  </a>
 
   {{ with .Site.Menus.main }}
   <nav>

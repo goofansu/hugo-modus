@@ -955,6 +955,10 @@ article {
   list-style-type: none;
 }
 
+.items-center {
+  align-items: center;
+}
+
 .justify-between {
   justify-content: space-between;
 }
