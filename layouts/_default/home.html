@@ -3,9 +3,9 @@
   {{ .Site.Params.Description | markdownify }}
 </p>
 
-<ul>
+<ul class="mt-4 list-none space-y-2">
   {{ range where .Site.RegularPages "Section" "in" .Site.MainSections }}
-  <li class="list-disc">
+  <li>
     <a href={{ .RelPermalink }}>
       {{ .Title }}
     </a>

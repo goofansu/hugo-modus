@@ -1,0 +1,33 @@
+<title>
+  {{- if .IsHome -}}
+    {{ .Site.Title }}
+  {{- else if .IsPage -}}
+    {{ .Title }} - {{ .Site.Title }}
+  {{- end -}}
+</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+
+<meta
+  name="description"
+  content="
+    {{- with .Description -}}
+      {{ . }}
+    {{- else -}}
+      {{- if .IsPage -}}
+        {{ .Summary }}
+      {{- else -}}
+        {{- with .Site.Params.description -}}{{ . }}{{- end -}}
+      {{- end -}}
+    {{- end -}}"
+/>
+{{ template "_internal/opengraph.html" . }}
+
+<link rel="canonical" href="{{ .Permalink }}">
+{{ partial "favicon.html" . }}
+
+{{ $style := resources.Get "css/dist/main.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">

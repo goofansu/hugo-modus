@@ -2,10 +2,6 @@ const colors = require('tailwindcss/colors')
 
 module.exports = {
   content: ['./layouts/**/*.html'],
-  safelist: [
-    'footnotes',
-    'chroma',
-  ],
   theme: {
     colors: {
       transparent: 'transparent',
@@ -69,6 +65,7 @@ module.exports = {
         indigo: '#4a3a8a',
         maroon: '#731c52',
         pink: '#7b435c',
+        gray: '#bdbdbd',
 
         // Background colors
         intense: {
@@ -155,6 +152,7 @@ module.exports = {
         indigo: '#9099d9',
         maroon: '#cf7fa7',
         pink: '#d09dc0',
+        gray: '#5a5a5a',
 
         // Background colors
         intense: {

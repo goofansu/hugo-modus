@@ -1,0 +1,21 @@
+<div class="flex justify-between">
+  <h1>
+    <a href={{ .Site.BaseURL }}>
+      {{ .Site.Title }}
+    </a>
+  </h1>
+
+  {{ with .Site.Menus.main }}
+  <nav>
+    <ul>
+      {{ range . }}
+      <li>
+        <a href="{{ .URL }}">
+          {{ .Name }}
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </nav>
+  {{ end }}
+</div>

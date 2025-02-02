@@ -3,87 +3,150 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply font-sans lg:text-lg dark:bg-vivendi-black dark:text-vivendi-white;
+  a {
+    @apply underline
+           text-operandi-blue-warmer
+           hover:bg-operandi-intense-blue
+           dark:text-vivendi-blue-warmer
+           dark:hover:bg-vivendi-intense-blue
+           transition-colors;
   }
 
-  nav {
-    @apply px-4 py-2 bg-operandi-white-dim dark:bg-vivendi-black-dim;
+  p {
+    @apply my-4;
+  }
 
-    ul {
-      @apply list-none m-0;
+  ul {
+    @apply list-disc;
+  }
+
+  ol {
+    @apply list-decimal;
+  }
+
+  code {
+    @apply text-base font-mono
+           text-operandi-magenta-warmer
+           dark:text-vivendi-magenta-warmer;
+  }
+
+  body {
+    @apply text-base font-sans
+           text-operandi-black bg-operandi-white
+           dark:text-vivendi-white dark:bg-vivendi-black;
+  }
+
+  header {
+    @apply bg-operandi-white-dim
+           dark:bg-vivendi-black-dim;
+
+    .container {
+      @apply mx-auto max-w-2xl px-4 py-2;
     }
 
-    li {
-      @apply inline;
+    nav {
+      ul {
+        @apply list-none space-x-2;
+
+        li {
+          @apply inline;
+        }
+      }
+    }
+
+    a {
+      @apply no-underline
+             text-current
+             hover:bg-transparent;
     }
   }
 
   main {
-    @apply p-4;
-
-    a {
-      @apply underline text-operandi-blue-warmer hover:bg-operandi-intense-blue dark:text-vivendi-blue-warmer dark:hover:bg-vivendi-intense-blue;
-    }
-
-    article {
-      blockquote {
-        @apply my-6 py-2 pl-6 border-l-2 border-dashed border-operandi-black-alt;
-      }
-
-      h1 {
-        @apply mt-8 mb-6 text-2xl font-bold leading-tight text-operandi-black-alt dark:text-vivendi-white;
-      }
-
-      h2 {
-        @apply mt-6 mb-4 text-xl font-bold leading-tight text-operandi-yellow-faint dark:text-vivendi-yellow-faint;
-      }
-
-      h3 {
-        @apply mt-5 mb-3 text-lg font-semibold leading-tight text-operandi-black-alt dark:text-vivendi-blue-faint;
-      }
+    .container {
+      @apply mx-auto max-w-2xl p-4;
     }
   }
 
   footer {
-    @apply mt-10 p-4 text-operandi-black-dim dark:text-vivendi-white-dim;
-  }
+    @apply text-operandi-black-alt
+           dark:text-vivendi-white-alt;
 
-  p {
-    @apply my-4 leading-6;
-  }
-
-  ul, ol {
-    @apply list-disc mx-6 my-4;
-  }
-
-  code {
-    @apply font-mono text-sm lg:text-base text-operandi-magenta-warmer dark:text-vivendi-magenta-warmer;
-  }
-
-  .chroma {
-    @apply p-2 bg-[#f2f2f2] dark:bg-vivendi-black-dim overflow-x-auto;
-
-    .line {
-      @apply text-operandi-black dark:text-vivendi-white;
-    }
-
-    .line.hl {
-      @apply -m-1 border-l-4 border-operandi-black-dim bg-[#bdbdbd] dark:border-vivendi-white-dim dark:bg-[#5a5a5a];
+    .container {
+      @apply mx-auto max-w-2xl p-4;
     }
   }
 
-  .footnotes {
-    @apply mt-10;
-
-    hr {
-      @apply my-10 border-dashed;
+  article {
+    blockquote {
+      @apply my-6 py-2 pl-6
+             border-l-2 border-dashed
+             border-operandi-black-alt
+             dark:border-vivendi-white-alt;
     }
-  }
-}
 
-@layer components {
-  .container {
-    @apply mx-auto max-w-2xl;
+    ul, ol {
+      @apply mx-6 my-4;
+    }
+
+    header {
+      @apply mb-8
+             bg-transparent;
+    }
+
+    time {
+      @apply mt-2
+             text-operandi-black-dim
+             dark:text-vivendi-white-dim;
+    }
+
+    nav {
+      @apply mt-10
+             border-t border-dashed;
+    }
+
+    h1 {
+      @apply text-4xl font-extrabold
+             text-operandi-black
+             dark:text-vivendi-white;
+    }
+
+    h2 {
+      @apply mt-6 mb-4
+             text-2xl font-bold
+             text-operandi-yellow-faint
+             dark:text-vivendi-yellow-faint;
+    }
+
+    h3 {
+      @apply mt-5 mb-3
+             text-lg font-semibold
+             text-operandi-black-alt
+             dark:text-vivendi-blue-faint;
+    }
+
+    .chroma {
+      @apply p-2
+             overflow-x-auto
+             bg-operandi-white-dim
+             dark:bg-vivendi-black-dim;
+
+      .line {
+        @apply text-operandi-black
+               dark:text-vivendi-white;
+      }
+
+      .line.hl {
+        @apply -m-1
+               bg-operandi-gray
+               border-l-4
+               border-operandi-black-dim
+               dark:bg-vivendi-gray
+               dark:border-vivendi-white-dim;
+      }
+    }
+
+    .footnotes {
+      @apply mt-10;
+    }
   }
 }
