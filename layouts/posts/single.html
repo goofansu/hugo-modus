@@ -11,25 +11,28 @@
   </header>
 
   {{ .Content }}
+</article>
 
-  <nav>
+<nav>
+  <hr>
+  <ul>
     {{ with .PrevInSection }}
-    <div class="pt-4">
+    <li>
       <span>Previous:</span>
       <a href="{{ .RelPermalink }}">
         {{ .Title }}
       </a>
-    </div>
+    </li>
     {{ end }}
 
     {{ with .NextInSection }}
-    <div class="pt-4">
+    <li>
       <span>Next:</span>
       <a href="{{ .RelPermalink }}">
         {{ .Title }}
       </a>
-    </div>
+    </li>
     {{ end }}
-  </nav>
-</article>
+  </ul>
+</nav>
 {{ end }}

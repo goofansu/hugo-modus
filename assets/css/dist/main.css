@@ -692,6 +692,28 @@ main {
   .container {
     padding: 1rem;
   }
+  nav {
+    margin-top: 2.5rem;
+  }
+  nav {
+    hr {
+      border-top-width: 1px;
+    }
+    hr {
+      border-style: dashed;
+    }
+    ul {
+      margin-top: 2.5rem;
+    }
+    ul {
+      list-style-type: none;
+    }
+    ul > :not([hidden]) ~ :not([hidden]) {
+      --tw-space-y-reverse: 0;
+      margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+      margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+    }
+  }
 }
 
 footer {
@@ -773,15 +795,6 @@ article {
       --tw-text-opacity: 1;
       color: rgb(152 152 152 / var(--tw-text-opacity, 1));
     }
-  }
-  nav {
-    margin-top: 2.5rem;
-  }
-  nav {
-    border-top-width: 1px;
-  }
-  nav {
-    border-style: dashed;
   }
   h1 {
     font-size: 2.25rem;
@@ -967,8 +980,4 @@ article {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
-}
-
-.pt-4 {
-  padding-top: 1rem;
 }

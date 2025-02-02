@@ -65,6 +65,18 @@
     .container {
       @apply mx-auto max-w-2xl p-4;
     }
+
+    nav {
+      @apply mt-10;
+
+      hr {
+        @apply border-t border-dashed;
+      }
+
+      ul {
+        @apply mt-10 list-none space-y-8;
+      }
+    }
   }
 
   footer {
@@ -97,11 +109,6 @@
       @apply mt-2
              text-operandi-black-dim
              dark:text-vivendi-white-dim;
-    }
-
-    nav {
-      @apply mt-10
-             border-t border-dashed;
     }
 
     h1 {
