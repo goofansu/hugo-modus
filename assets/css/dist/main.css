@@ -780,6 +780,70 @@ code {
   }
 }
 
+.chroma {
+  overflow-x: auto;
+  --tw-bg-opacity: 1;
+  background-color: rgb(242 242 242 / var(--tw-bg-opacity, 1));
+  padding: 0.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .chroma {
+    --tw-bg-opacity: 1;
+    background-color: rgb(30 30 30 / var(--tw-bg-opacity, 1));
+  }
+}
+
+.chroma {
+  .line {
+    --tw-text-opacity: 1;
+    color: rgb(0 0 0 / var(--tw-text-opacity, 1));
+  }
+  @media (prefers-color-scheme: dark) {
+    .line {
+      --tw-text-opacity: 1;
+      color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+    }
+  }
+  .line.hl {
+    margin: -0.25rem;
+  }
+  .line.hl {
+    border-left-width: 4px;
+  }
+  .line.hl {
+    --tw-border-opacity: 1;
+    border-color: rgb(89 89 89 / var(--tw-border-opacity, 1));
+  }
+  .line.hl {
+    --tw-bg-opacity: 1;
+    background-color: rgb(189 189 189 / var(--tw-bg-opacity, 1));
+  }
+  @media (prefers-color-scheme: dark) {
+    .line.hl {
+      --tw-border-opacity: 1;
+      border-color: rgb(152 152 152 / var(--tw-border-opacity, 1));
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    .line.hl {
+      --tw-bg-opacity: 1;
+      background-color: rgb(90 90 90 / var(--tw-bg-opacity, 1));
+    }
+  }
+}
+
+.footnotes {
+  margin-top: 2.5rem;
+  hr {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+  hr {
+    border-style: dashed;
+  }
+}
+
 .container {
   width: 100%;
 }
@@ -854,68 +918,4 @@ code {
 
 .pt-6 {
   padding-top: 1.5rem;
-}
-
-.footnotes {
-  margin-top: 2.5rem;
-  hr {
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
-  }
-  hr {
-    border-style: dashed;
-  }
-}
-
-.chroma {
-  overflow-x: auto;
-  --tw-bg-opacity: 1;
-  background-color: rgb(242 242 242 / var(--tw-bg-opacity, 1));
-  padding: 0.5rem;
-}
-
-@media (prefers-color-scheme: dark) {
-  .chroma {
-    --tw-bg-opacity: 1;
-    background-color: rgb(30 30 30 / var(--tw-bg-opacity, 1));
-  }
-}
-
-.chroma {
-  .line {
-    --tw-text-opacity: 1;
-    color: rgb(0 0 0 / var(--tw-text-opacity, 1));
-  }
-  @media (prefers-color-scheme: dark) {
-    .line {
-      --tw-text-opacity: 1;
-      color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-    }
-  }
-  .line.hl {
-    margin: -0.25rem;
-  }
-  .line.hl {
-    border-left-width: 4px;
-  }
-  .line.hl {
-    --tw-border-opacity: 1;
-    border-color: rgb(89 89 89 / var(--tw-border-opacity, 1));
-  }
-  .line.hl {
-    --tw-bg-opacity: 1;
-    background-color: rgb(189 189 189 / var(--tw-bg-opacity, 1));
-  }
-  @media (prefers-color-scheme: dark) {
-    .line.hl {
-      --tw-border-opacity: 1;
-      border-color: rgb(152 152 152 / var(--tw-border-opacity, 1));
-    }
-  }
-  @media (prefers-color-scheme: dark) {
-    .line.hl {
-      --tw-bg-opacity: 1;
-      background-color: rgb(90 90 90 / var(--tw-bg-opacity, 1));
-    }
-  }
 }

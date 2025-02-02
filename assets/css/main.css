@@ -60,30 +60,30 @@
   code {
     @apply font-mono text-sm lg:text-base text-operandi-magenta-warmer dark:text-vivendi-magenta-warmer;
   }
+
+  .chroma {
+    @apply p-2 bg-[#f2f2f2] dark:bg-vivendi-black-dim overflow-x-auto;
+
+    .line {
+      @apply text-operandi-black dark:text-vivendi-white;
+    }
+
+    .line.hl {
+      @apply -m-1 border-l-4 border-operandi-black-dim bg-[#bdbdbd] dark:border-vivendi-white-dim dark:bg-[#5a5a5a];
+    }
+  }
+
+  .footnotes {
+    @apply mt-10;
+
+    hr {
+      @apply my-10 border-dashed;
+    }
+  }
 }
 
 @layer components {
   .container {
     @apply mx-auto max-w-2xl;
-  }
-}
-
-.footnotes {
-  @apply mt-10;
-
-  hr {
-    @apply my-10 border-dashed;
-  }
-}
-
-.chroma {
-  @apply p-2 bg-[#f2f2f2] dark:bg-vivendi-black-dim overflow-x-auto;
-
-  .line {
-    @apply text-operandi-black dark:text-vivendi-white;
-  }
-
-  .line.hl {
-    @apply -m-1 border-l-4 border-operandi-black-dim bg-[#bdbdbd] dark:border-vivendi-white-dim dark:bg-[#5a5a5a];
   }
 }

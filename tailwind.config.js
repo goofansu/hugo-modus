@@ -2,6 +2,10 @@ const colors = require('tailwindcss/colors')
 
 module.exports = {
   content: ['./layouts/**/*.html'],
+  safelist: [
+    'footnotes',
+    'chroma',
+  ],
   theme: {
     colors: {
       transparent: 'transparent',
