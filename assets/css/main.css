@@ -25,7 +25,7 @@
   }
 
   code {
-    @apply text-base font-mono
+    @apply text-sm font-mono
            text-operandi-magenta-warmer
            dark:text-vivendi-magenta-warmer;
   }
