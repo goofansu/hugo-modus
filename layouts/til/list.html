@@ -4,7 +4,7 @@
 </header>
 
 <ul class="mt-8 space-y-4">
-  {{ range .Pages.ByDate.Reverse }}
+  {{ range .Pages }}
   <li>
     {{ partial "til.html" . }}
   </li>
