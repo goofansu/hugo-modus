@@ -1,21 +1,24 @@
 {{ define "main" }}
 <article>
-  <header>
+  <header class="mb-10">
     <h1>
       {{ .Title }}
     </h1>
 
-    <time datetime="{{ .Date.Format "2006-01-02" }}">
-      {{ .Date.Format "January 2, 2006" }}
+    {{ with .Date }}
+    <time class="text-operandi-black-dim dark:text-vivendi-white-dim"
+          datetime="{{ .Format "2006-01-02" }}">
+      {{ .Format "January 2, 2006" }}
     </time>
+    {{ end }}
   </header>
 
   {{ .Content }}
 </article>
 
-<nav>
-  <hr>
-  <ul>
+<nav class="mt-10">
+  <hr class="border-t border-dashed">
+  <ul class="mt-10 list-none space-y-8">
     {{ with .PrevInSection }}
     <li>
       <span>Previous:</span>

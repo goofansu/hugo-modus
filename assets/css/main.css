@@ -12,80 +12,30 @@
            transition-colors;
   }
 
+  h1 {
+    @apply text-4xl font-extrabold
+           text-operandi-black
+           dark:text-vivendi-white;
+  }
+
+  h2 {
+    @apply text-2xl font-bold
+           text-operandi-yellow-faint
+           dark:text-vivendi-yellow-faint;
+  }
+
+  h3 {
+    @apply text-lg font-semibold
+           text-operandi-black-alt
+           dark:text-vivendi-blue-faint;
+  }
+
   p {
     @apply my-4;
   }
 
-  ul {
-    @apply list-disc;
-  }
-
-  ol {
-    @apply list-decimal;
-  }
-
-  code {
-    @apply text-sm font-mono
-           text-operandi-magenta-warmer
-           dark:text-vivendi-magenta-warmer;
-  }
-
-  body {
-    @apply text-base font-sans
-           text-operandi-black bg-operandi-white
-           dark:text-vivendi-white dark:bg-vivendi-black;
-  }
-
-  header {
-    @apply bg-operandi-white-dim
-           dark:bg-vivendi-black-dim;
-
-    .container {
-      @apply mx-auto max-w-2xl px-4 py-2;
-    }
-
-    nav {
-      ul {
-        @apply list-none space-x-2;
-
-        li {
-          @apply inline;
-        }
-      }
-    }
-
-    a {
-      @apply no-underline
-             text-current
-             hover:bg-transparent;
-    }
-  }
-
-  main {
-    .container {
-      @apply mx-auto max-w-2xl p-4;
-    }
-
-    nav {
-      @apply mt-10;
-
-      hr {
-        @apply border-t border-dashed;
-      }
-
-      ul {
-        @apply mt-10 list-none space-y-8;
-      }
-    }
-  }
-
-  footer {
-    @apply text-operandi-black-alt
-           dark:text-vivendi-white-alt;
-
-    .container {
-      @apply mx-auto max-w-2xl p-4;
-    }
+  ol, ul {
+    @apply m-0 p-0 list-none;
   }
 
   article {
@@ -96,39 +46,30 @@
              dark:border-vivendi-blue-warmer;
     }
 
-    ul, ol {
-      @apply mx-6 my-4;
-    }
-
-    header {
-      @apply mb-8
-             bg-transparent;
-    }
-
-    time {
-      @apply mt-2
-             text-operandi-black-dim
-             dark:text-vivendi-white-dim;
-    }
-
-    h1 {
-      @apply text-4xl font-extrabold
-             text-operandi-black
-             dark:text-vivendi-white;
+    code {
+      @apply text-sm font-mono
+             text-operandi-magenta-warmer
+             dark:text-vivendi-magenta-warmer;
     }
 
     h2 {
-      @apply mt-6 mb-4
-             text-2xl font-bold
-             text-operandi-yellow-faint
-             dark:text-vivendi-yellow-faint;
+      @apply mt-6 mb-4;
     }
 
     h3 {
-      @apply mt-5 mb-3
-             text-lg font-semibold
-             text-operandi-black-alt
-             dark:text-vivendi-blue-faint;
+      @apply mt-5 mb-3;
+    }
+
+    ol, ul {
+      @apply mx-6 my-4;
+    }
+
+    ol {
+      @apply list-decimal;
+    }
+
+    ul {
+      @apply list-disc;
     }
 
     .chroma {

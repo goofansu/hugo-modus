@@ -3,7 +3,7 @@
   {{ .Site.Params.Description | markdownify }}
 </p>
 
-<ul class="mt-4 list-none space-y-2">
+<ul class="mt-4 space-y-2">
   {{ range where .Site.RegularPages "Section" "in" .Site.MainSections }}
   <li>
     <a href={{ .RelPermalink }}>

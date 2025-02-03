@@ -1,0 +1,18 @@
+{{ define "main" }}
+<article>
+  <header class="mb-10">
+    <h1>
+      {{ .Title }}
+    </h1>
+
+    {{ with .Lastmod }}
+    <time class="text-operandi-black-dim dark:text-vivendi-white-dim"
+          datetime="{{ .Format "2006-01-02" }}">
+      {{ .Format "January 2, 2006" }}
+    </time>
+    {{ end }}
+  </header>
+
+  {{ .Content }}
+</article>
+{{ end }}

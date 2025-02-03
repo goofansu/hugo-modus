@@ -1,0 +1,13 @@
+{{ define "main" }}
+<header>
+  <h1>TILs</h1>
+</header>
+
+<ul class="mt-8 space-y-4">
+  {{ range .Pages.ByDate.Reverse }}
+  <li>
+    {{ partial "til.html" . }}
+  </li>
+  {{ end }}
+</ul>
+{{ end }}

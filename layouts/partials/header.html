@@ -1,14 +1,14 @@
 <div class="flex justify-between items-center">
-  <a href={{ .Site.Home }}>
+  <a href={{ .Site.Home }} class="no-underline text-current hover:bg-transparent">
     {{ .Site.Title }}
   </a>
 
   {{ with .Site.Menus.main }}
   <nav>
-    <ul>
+    <ul class="list-none space-x-2">
       {{ range . }}
-      <li>
-        <a href="{{ .URL }}">
+      <li class="inline">
+        <a href="{{ .URL }}" class="no-underline text-current hover:bg-transparent">
           {{ .Name }}
         </a>
       </li>
