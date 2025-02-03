@@ -1,4 +1,8 @@
 {{ define "main" }}
+<h1>
+  {{ .Site.Params.Greeting | default "Welcome!" }}
+</h1>
+
 <p>
   {{ .Site.Params.Description | markdownify }}
 </p>
