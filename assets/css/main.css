@@ -60,6 +60,12 @@
       @apply mt-5 mb-3;
     }
 
+    h2, h3 {
+      &:hover .headline-hash {
+        @apply opacity-100;
+      }
+    }
+
     ol, ul {
       @apply mx-6 my-4;
     }

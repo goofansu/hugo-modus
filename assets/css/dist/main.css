@@ -693,6 +693,11 @@ article {
   h3 {
     margin-bottom: 0.75rem;
   }
+  h2, h3 {
+    &:hover .headline-hash {
+      opacity: 1;
+    }
+  }
   ol, ul {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
@@ -989,6 +994,10 @@ article {
 
 .no-underline {
   text-decoration-line: none;
+}
+
+.opacity-0 {
+  opacity: 0;
 }
 
 .transition-shadow {
