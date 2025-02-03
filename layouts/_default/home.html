@@ -3,13 +3,16 @@
   {{ .Site.Params.Description | markdownify }}
 </p>
 
-<ul class="mt-4 space-y-2">
+<div role="list" class="grid grid-cols-[fit-content(200px)_1fr] gap-x-4 gap-y-2">
   {{ range where .Site.RegularPages "Section" "in" .Site.MainSections }}
-  <li>
-    <a href={{ .RelPermalink }}>
-      {{ .Title }}
-    </a>
-  </li>
+  <time class="font-serif text-operandi-black-dim dark:text-vivendi-white-dim"
+        datetime="{{ .Date.Format "2006-01-02" }}">
+    {{ .Date.Format "Jan 2 2006" }}
+  </time>
+
+  <a href={{ .RelPermalink }}>
+    {{ .Title }}
+  </a>
   {{ end }}
-</ul>
+</div>
 {{ end }}
