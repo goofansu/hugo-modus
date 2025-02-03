@@ -875,6 +875,12 @@ article {
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 }
 
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }

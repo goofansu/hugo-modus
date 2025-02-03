@@ -1,31 +1,33 @@
-<title>
-  {{- if .IsHome -}}
-    {{ .Site.Title }}
-  {{- else if .IsPage -}}
-    {{ .Title }} - {{ .Site.Title }}
-  {{- else if .IsSection -}}
-    {{ .Title | default (.Type | humanize) }} - {{ .Site.Title }}
+{{- $title := "" -}}
+{{- if .IsHome -}}
+  {{- $title = .Site.Title -}}
+{{- else if .IsPage -}}
+  {{- $title = printf "%s - %s" .Title .Site.Title -}}
+{{- else if .IsSection -}}
+  {{- $title = printf "%s - %s" (.Title | default (.Type | humanize)) .Site.Title -}}
+{{- end -}}
+
+{{- $description := "" -}}
+{{- with .Description -}}
+  {{- $description = . | truncate 160 -}}
+{{- else -}}
+  {{- if .IsPage -}}
+    {{- $description = .Summary | truncate 160 -}}
+  {{- else -}}
+    {{- with .Site.Params.description -}}
+      {{- $description = . -}}
+    {{- end -}}
   {{- end -}}
-</title>
+{{- end -}}
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
 
-<meta
-  name="description"
-  content="
-    {{- with .Description -}}
-      {{ . }}
-    {{- else -}}
-      {{- if .IsPage -}}
-        {{ .Summary }}
-      {{- else -}}
-        {{- with .Site.Params.description -}}{{ . }}{{- end -}}
-      {{- end -}}
-    {{- end -}}"
-/>
+<title>{{- $title -}}</title>
+
+<meta name="description" content="{{- $description -}}" />
 {{ template "_internal/opengraph.html" . }}
 
 <link rel="canonical" href="{{ .Permalink }}">
@@ -33,3 +35,7 @@
 
 {{ $style := resources.Get "css/dist/main.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+
+{{ with .OutputFormats.Get "rss" -}}
+  {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+{{ end }}
