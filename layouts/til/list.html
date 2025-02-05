@@ -3,7 +3,11 @@
   <h1>TILs</h1>
 </header>
 
-<ul class="mt-8 space-y-4">
+<p>
+  {{ .Description }}
+</p>
+
+<ul class="space-y-4">
   {{ range .Pages }}
   <li>
     {{ partial "til.html" . }}
