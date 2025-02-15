@@ -975,6 +975,10 @@ article {
   line-height: 1.25rem;
 }
 
+.font-semibold {
+  font-weight: 600;
+}
+
 .text-current {
   color: currentColor;
 }

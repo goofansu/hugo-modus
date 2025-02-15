@@ -2,11 +2,13 @@
                 border border-operandi-gray dark:border-vivendi-gray
                 shadow-sm hover:shadow-md transition-shadow">
   <header class="mb-4">
-    <h3 class="m-0 text-base text-operandi-black dark:text-vivendi-white">
+    <h1 class="m-0 text-base font-semibold
+               text-operandi-black
+               dark:text-vivendi-white">
       <a href="{{ .RelPermalink }}" class="no-underline text-current hover:bg-transparent">
         {{ .Title }}
       </a>
-    </h3>
+    </h1>
 
     <time class="text-sm text-operandi-black-dim dark:text-vivendi-white-dim"
           datetime="{{ .Date.Format "2006-01-02" }}">
