@@ -7,13 +7,31 @@
   {{ .Site.Params.Description | markdownify }}
 </p>
 
-<ul class="space-y-2">
-  {{ range .Sections }}
-  <li>
-    <a href="{{ .RelPermalink }}">
-      {{ .Title }}
-    </a>
-  </li>
-  {{ end }}
-</ul>
+<nav>
+  <ul class="space-y-2">
+    {{ range .Sections }}
+    <li>
+      <a href="{{ .RelPermalink }}">
+        {{ .Title }}
+      </a>
+    </li>
+    {{ end }}
+
+    {{ range .RegularPages }}
+    <li>
+      <a href="{{ .RelPermalink }}">
+        {{ .Title }}
+      </a>
+    </li>
+    {{ end }}
+
+    {{ range .Site.Menus.main }}
+    <li>
+      <a href="{{ .URL }}" target="_blank" rel="me noopener noreferrer">
+        {{ .Name }}
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+</nav>
 {{ end }}

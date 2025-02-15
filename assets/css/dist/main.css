@@ -580,6 +580,13 @@ a:hover {
   }
 }
 
+a[target="_blank"]::after {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-content: '↗';
+  content: var(--tw-content);
+}
+
 h1 {
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -817,10 +824,6 @@ article {
   display: block;
 }
 
-.inline {
-  display: inline;
-}
-
 .flex {
   display: flex;
 }
@@ -864,12 +867,6 @@ article {
 
 .gap-y-2 {
   row-gap: 0.5rem;
-}
-
-.space-x-2 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
-  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .space-y-2 > :not([hidden]) ~ :not([hidden]) {

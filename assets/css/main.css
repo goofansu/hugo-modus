@@ -12,6 +12,10 @@
            transition-colors;
   }
 
+  a[target="_blank"] {
+    @apply after:content-['↗'] after:text-sm;
+  }
+
   h1 {
     @apply text-4xl font-extrabold
            text-operandi-black

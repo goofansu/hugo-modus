@@ -2,18 +2,4 @@
   <a href="{{ .Site.Home }}" class="no-underline text-current hover:bg-transparent">
     {{ .Site.Title }}
   </a>
-
-  {{ with .Site.Menus.main }}
-  <nav>
-    <ul class="list-none space-x-2">
-      {{ range . }}
-      <li class="inline">
-        <a href="{{ .URL }}" class="no-underline text-current hover:bg-transparent">
-          {{ .Name }}
-        </a>
-      </li>
-      {{ end }}
-    </ul>
-  </nav>
-  {{ end }}
 </div>
