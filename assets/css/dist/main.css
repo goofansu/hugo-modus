@@ -991,11 +991,6 @@ article {
   color: rgb(89 89 89 / var(--tw-text-opacity, 1));
 }
 
-.text-operandi-cyan {
-  --tw-text-opacity: 1;
-  color: rgb(0 94 139 / var(--tw-text-opacity, 1));
-}
-
 .no-underline {
   text-decoration-line: none;
 }
@@ -1045,11 +1040,6 @@ article {
   .dark\:bg-vivendi-subtle-blue {
     --tw-bg-opacity: 1;
     background-color: rgb(36 38 121 / var(--tw-bg-opacity, 1));
-  }
-
-  .dark\:text-vivendi-cyan {
-    --tw-text-opacity: 1;
-    color: rgb(0 211 208 / var(--tw-text-opacity, 1));
   }
 
   .dark\:text-vivendi-white {
