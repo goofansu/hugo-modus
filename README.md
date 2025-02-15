@@ -1,6 +1,6 @@
 # hugo-modus
 
-A Hugo theme inspired by [Modus themes](https://protesilaos.com/emacs/modus-themes). 
+An opinioned theme using the [colour palette of the Modus themes](https://protesilaos.com/emacs/modus-themes-colors).
 
 ## Installation
 
