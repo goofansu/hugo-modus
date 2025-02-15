@@ -1,13 +1,10 @@
 baseURL = "https://hugo-modus.vercel.app/"
-title = "Modus"
-copyright = "Copyright &copy; 2024 Modus contributors."
-
-disableKinds = ["section", "taxonomy", "term"]
-enableRobotsTXT = true
+title = "hugo-modus"
+copyright = "&copy; 2025"
 theme = "modus"
 
 [params]
-description = "A Hugo theme inspired by [Modus themes](https://protesilaos.com/emacs/modus-themes)."
+description = "An opinioned theme using the [colour palette of the Modus themes](https://protesilaos.com/emacs/modus-themes-colors)."
 
 [markup]
   [markup.highlight]
@@ -15,5 +12,5 @@ description = "A Hugo theme inspired by [Modus themes](https://protesilaos.com/e
 
 [menus]
   [[menus.main]]
-  name = "Subscribe"
-  url = "/index.xml"
+    name = "Source"
+    url = "https://github.com/goofansu/hugo-modus"
