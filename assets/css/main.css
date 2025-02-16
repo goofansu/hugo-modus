@@ -41,7 +41,15 @@
   }
 
   ol, ul {
-    @apply m-0 p-0 list-none;
+    @apply mx-6 my-4;
+  }
+
+  ol {
+    @apply list-decimal;
+  }
+
+  ul {
+    @apply list-disc;
   }
 
   article {
@@ -62,18 +70,6 @@
       &:hover .headline-hash {
         @apply opacity-100 transition-opacity duration-700;
       }
-    }
-
-    ol, ul {
-      @apply mx-6 my-4;
-    }
-
-    ol {
-      @apply list-decimal;
-    }
-
-    ul {
-      @apply list-disc;
     }
 
     .chroma {

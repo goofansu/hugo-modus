@@ -1,18 +1,13 @@
 {{ define "main" }}
-<h1>
-  {{ .Site.Params.Greeting | default "Welcome!" }}
-</h1>
-
-<p>
-  {{ .Site.Params.Description | markdownify }}
-</p>
+<h1>{{ .Site.Params.Greeting | default "Welcome!" }}</h1>
+<p>{{ .Site.Params.Description | markdownify }}</p>
 
 <nav>
-  <h2>Everything</h2>
-  <ul class="list-none space-y-2">
+  <h2>Index</h2>
+  <ul class="space-y-4">
     {{ range .Sections }}
     <li>
-      <a href="{{ .RelPermalink }}">
+      <a href="{{ .RelPermalink }}" class="font-bold">
         {{ .Title }}
       </a>
     </li>
