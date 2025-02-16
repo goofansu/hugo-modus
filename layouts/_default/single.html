@@ -14,24 +14,24 @@
 
 <nav class="mt-10">
   <hr class="border-t border-dashed">
-  <ul class="mt-10 list-none space-y-8">
+  <div class="mt-10 space-y-8">
     {{ with .PrevInSection }}
-    <li>
-      <span>Previous:</span>
+    <p>
+      Previous:
       <a href="{{ .RelPermalink }}">
         {{ .Title }}
       </a>
-    </li>
+    </p>
     {{ end }}
 
     {{ with .NextInSection }}
-    <li>
-      <span>Next:</span>
+    <p>
+      Next:
       <a href="{{ .RelPermalink }}">
         {{ .Title }}
       </a>
-    </li>
+    </p>
     {{ end }}
-  </ul>
+  </div>
 </nav>
 {{ end }}

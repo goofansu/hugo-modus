@@ -4,15 +4,13 @@
   </a>
 
   <nav>
-    <ul class="list-none space-x-2">
+    <div class="space-x-2">
       {{ range .Site.Menus.main }}
-      <li class="inline">
-        <a href="{{ .URL }}"
-           class="no-underline text-current hover:bg-transparent">
-          {{ .Name }}
-        </a>
-      </li>
+      <a href="{{ .URL }}"
+         class="no-underline text-current hover:bg-transparent">
+        {{ .Name }}
+      </a>
       {{ end }}
-    </ul>
+    </div>
   </nav>
 </div>
