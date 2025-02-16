@@ -23,13 +23,15 @@
   }
 
   h2 {
-    @apply text-2xl font-bold
+    @apply mt-6 mb-4
+           text-2xl font-bold
            text-operandi-yellow-faint
            dark:text-vivendi-yellow-faint;
   }
 
   h3 {
-    @apply text-lg font-semibold
+    @apply mt-5 mb-3
+           text-lg font-semibold
            text-operandi-black-alt
            dark:text-vivendi-blue-faint;
   }
@@ -54,14 +56,6 @@
       @apply text-sm font-mono
              text-operandi-magenta-warmer
              dark:text-vivendi-magenta-warmer;
-    }
-
-    h2 {
-      @apply mt-6 mb-4;
-    }
-
-    h3 {
-      @apply mt-5 mb-3;
     }
 
     h2, h3 {

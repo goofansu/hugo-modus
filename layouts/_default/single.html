@@ -9,6 +9,29 @@
     </time>
   </header>
 
-  {{ .Content }}
+  {{ partial "headline-hash.html" .Content }}
 </article>
+
+<nav class="mt-10">
+  <hr class="border-t border-dashed">
+  <ul class="mt-10 list-none space-y-8">
+    {{ with .PrevInSection }}
+    <li>
+      <span>Previous:</span>
+      <a href="{{ .RelPermalink }}">
+        {{ .Title }}
+      </a>
+    </li>
+    {{ end }}
+
+    {{ with .NextInSection }}
+    <li>
+      <span>Next:</span>
+      <a href="{{ .RelPermalink }}">
+        {{ .Title }}
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+</nav>
 {{ end }}

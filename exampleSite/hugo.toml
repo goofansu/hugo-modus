@@ -5,6 +5,7 @@ theme = "modus"
 
 [params]
 description = "An opinioned theme using the [colour palette of the Modus themes](https://protesilaos.com/emacs/modus-themes-colors)."
+mainSections = ["posts", "til"]
 
 [markup]
   [markup.highlight]
