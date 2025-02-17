@@ -5,7 +5,8 @@
     <h1 class="text-base font-semibold
                text-operandi-black
                dark:text-vivendi-white">
-      <a href="{{ .RelPermalink }}" class="no-underline text-current hover:bg-transparent">
+      <a href="{{ .RelPermalink }}"
+         class="no-underline text-current hover:bg-transparent">
         {{ .Title }}
       </a>
     </h1>
@@ -22,7 +23,7 @@
   <div class="mt-4">
     <div class="flex flex-wrap gap-2">
       {{ range . }}
-      <span class="px-3 py-1
+      <span class="px-2 py-1
                    rounded-full
                    text-sm
                    text-operandi-black-alt bg-operandi-subtle-blue

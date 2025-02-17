@@ -6,11 +6,18 @@
 <article class="pb-4 border-b border-operandi-gray dark:border-vivendi-gray">
   {{ .Content }}
 
-  <time class="text-sm text-operandi-black-dim dark:text-vivendi-white-dim"
-        datetime="{{ .Date.Format "2006-01-02 15:04:05" }}">
-    <a href="{{ .RelPermalink }}">{{ .Date.Format "3:04 PM" }}</a>
-    on {{ .Date.Format "January 2, 2006" }}
-  </time>
+  <div class="text-sm text-operandi-black-dim dark:text-vivendi-white-dim">
+    <time datetime="{{ .Date.Format "2006-01-02 15:04:05" }}">
+      <a href="{{ .RelPermalink }}">{{ .Date.Format "3:04 PM" }}</a>
+      on {{ .Date.Format "January 2, 2006" }}
+    </time>
+
+    {{ with .Params.tags }}
+    <span class="text-operandi-blue-warmer dark:text-vivendi-blue-warmer">
+      {{ delimit . ", " }}
+    </span>
+    {{ end }}
+  </div>
 </article>
 {{ end }}
 {{ end }}

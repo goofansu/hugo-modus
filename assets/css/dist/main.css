@@ -920,9 +920,9 @@ article {
   padding: 1rem;
 }
 
-.px-3 {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .px-4 {
@@ -993,6 +993,11 @@ article {
   color: rgb(89 89 89 / var(--tw-text-opacity, 1));
 }
 
+.text-operandi-blue-warmer {
+  --tw-text-opacity: 1;
+  color: rgb(53 79 207 / var(--tw-text-opacity, 1));
+}
+
 .no-underline {
   text-decoration-line: none;
 }
@@ -1042,6 +1047,11 @@ article {
   .dark\:bg-vivendi-subtle-blue {
     --tw-bg-opacity: 1;
     background-color: rgb(36 38 121 / var(--tw-bg-opacity, 1));
+  }
+
+  .dark\:text-vivendi-blue-warmer {
+    --tw-text-opacity: 1;
+    color: rgb(121 168 255 / var(--tw-text-opacity, 1));
   }
 
   .dark\:text-vivendi-white {
