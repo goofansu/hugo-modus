@@ -1,0 +1,16 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+<p>{{ .Description | markdownify }}</p>
+
+{{ range .Pages }}
+<article class="pb-4 border-b border-operandi-gray dark:border-vivendi-gray">
+  {{ .Content }}
+
+  <time class="text-sm text-operandi-black-dim dark:text-vivendi-white-dim"
+        datetime="{{ .Date.Format "2006-01-02 15:04:05" }}">
+    <a href="{{ .RelPermalink }}">{{ .Date.Format "3:04 PM" }}</a>
+    on {{ .Date.Format "January 2, 2006" }}
+  </time>
+</article>
+{{ end }}
+{{ end }}
