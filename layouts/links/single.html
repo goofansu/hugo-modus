@@ -2,13 +2,12 @@
 <article>
   {{ .Content }}
 
-  <div class="mt-10 pt-2 border-t
-              text-sm text-operandi-black-dim
-              dark:text-vivendi-white-dim">
-    <span>Posted on</span>
-    <time datetime="{{ .Date.Format "2006-01-02 15:04:05" }}">
-      {{ .Date.Format "January 2, 2006 at 3:04 PM" }}
-    </time>
-  </div>
+  <nav>
+    <a href="/links/">
+      <time class="text-sm" datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}">
+        « {{ .Date.Format "Jan 2, 2006 3:04 PM" }}
+      </time>
+    </a>
+  </nav>
 </article>
 {{ end }}
