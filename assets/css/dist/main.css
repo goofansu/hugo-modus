@@ -641,21 +641,6 @@ p {
   margin-bottom: 1rem;
 }
 
-ol, ul {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-ol {
-  list-style-type: decimal;
-}
-
-ul {
-  list-style-type: disc;
-}
-
 article {
   blockquote {
     margin-top: 1.5rem;
@@ -713,6 +698,20 @@ article {
     &:hover .headline-hash {
       transition-duration: 700ms;
     }
+  }
+  ol, ul {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+  ol, ul {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  ol {
+    list-style-type: decimal;
+  }
+  ul {
+    list-style-type: disc;
   }
   .chroma {
     overflow-x: auto;
@@ -773,6 +772,11 @@ article {
   }
 }
 
+.mx-6 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -781,6 +785,11 @@ article {
 .my-10 {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
+}
+
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .mb-10 {
@@ -819,6 +828,10 @@ article {
   max-width: 42rem;
 }
 
+.list-disc {
+  list-style-type: disc;
+}
+
 .grid-cols-\[fit-content\(200px\)_1fr\] {
   grid-template-columns: fit-content(200px) 1fr;
 }
@@ -848,22 +861,16 @@ article {
   row-gap: 0.5rem;
 }
 
-.space-x-2 > :not([hidden]) ~ :not([hidden]) {
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
-  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
-  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
-}
-
-.space-y-8 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 }
 
 .truncate {

@@ -40,18 +40,6 @@
     @apply my-4;
   }
 
-  ol, ul {
-    @apply mx-6 my-4;
-  }
-
-  ol {
-    @apply list-decimal;
-  }
-
-  ul {
-    @apply list-disc;
-  }
-
   article {
     blockquote {
       @apply my-6 py-2 pl-6
@@ -70,6 +58,18 @@
       &:hover .headline-hash {
         @apply opacity-100 transition-opacity duration-700;
       }
+    }
+
+    ol, ul {
+      @apply mx-6 my-4;
+    }
+
+    ol {
+      @apply list-decimal;
+    }
+
+    ul {
+      @apply list-disc;
     }
 
     .chroma {

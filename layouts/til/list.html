@@ -2,9 +2,11 @@
 <h1>TILs</h1>
 <p>{{ .Description | markdownify }}</p>
 
-<div class="space-y-4">
+<ul class="space-y-4">
   {{ range .Pages }}
+  <li>
     {{ partial "til.html" . }}
+  </li>
   {{ end }}
-</div>
+</ul>
 {{ end }}

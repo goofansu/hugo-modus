@@ -5,13 +5,15 @@
   </a>
 
   <nav>
-    <div class="space-x-2">
+    <ul class="flex space-x-4">
       {{ range .Site.Menus.main }}
-      <a href="{{ .URL }}"
-         class="no-underline text-current hover:bg-transparent">
-        {{ .Name }}
-      </a>
+      <li>
+        <a href="{{ .URL }}"
+           class="no-underline text-current hover:bg-transparent">
+          {{ .Name }}
+        </a>
+      </li>
       {{ end }}
-    </div>
+    </ul>
   </nav>
 </div>
