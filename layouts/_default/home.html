@@ -5,7 +5,7 @@
 <nav>
   <h2>Index</h2>
   <ul class="space-y-4">
-    {{ range .Sections }}
+    {{ range .Sections.ByTitle }}
     <li>
       <a href="{{ .RelPermalink }}" class="font-bold">
         {{ .Title }}
