@@ -2,10 +2,20 @@
 <h1>{{ .Title }}</h1>
 <p>{{ .Description | markdownify }}</p>
 
-<ul class="space-y-4">
+<ul class="divide-y divide-operandi-gray dark:divide-operandi-gray">
   {{ range .Pages }}
-  <li>
-    {{ partial "til.html" . }}
+  <li class="py-4">
+    <article>
+      {{ .Content }}
+
+      <div>
+        <a href="{{ .RelPermalink }}">
+          <time datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}" class="text-sm">
+            {{ .Date.Format "3:04 PM ·  Jan 2, 2006" }}
+          </time>
+        </a>
+      </div>
+    </article>
   </li>
   {{ end }}
 </ul>

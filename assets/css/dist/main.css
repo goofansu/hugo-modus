@@ -869,6 +869,17 @@ article {
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
+.divide-y > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-y-reverse: 0;
+  border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
+  border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
+}
+
+.divide-operandi-gray > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-opacity: 1;
+  border-color: rgb(224 224 224 / var(--tw-divide-opacity, 1));
+}
+
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -937,6 +948,11 @@ article {
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .font-sans {
@@ -1015,6 +1031,11 @@ article {
 }
 
 @media (prefers-color-scheme: dark) {
+  .dark\:divide-operandi-gray > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-opacity: 1;
+    border-color: rgb(224 224 224 / var(--tw-divide-opacity, 1));
+  }
+
   .dark\:border-vivendi-gray {
     --tw-border-opacity: 1;
     border-color: rgb(48 48 48 / var(--tw-border-opacity, 1));
