@@ -3,8 +3,18 @@
 <p>{{ .Site.Params.Description | markdownify }}</p>
 
 {{ if gt (len .Sections) 1 }}
-  {{ partial "section-index.html" .Sections.ByTitle }}
+  <h2>Index</h2>
+  <ul class="mx-6 my-4 space-y-4 list-disc">
+    {{ range .Sections.ByTitle }}
+    <li>
+      <a href="{{ .RelPermalink }}" class="font-bold">
+        {{ .Title }}
+      </a>
+    </li>
+    {{ end }}
+  </ul>
 {{ else }}
-  {{ partial "page-list.html" (where .Site.RegularPages "Section" "in" .Site.MainSections) }}
+  {{ $pages := where .Site.RegularPages "Section" "in" .Site.MainSections }}
+  {{ partial "page-list.html" $pages }}
 {{ end }}
 {{ end }}
