@@ -1,7 +1,7 @@
 name = "modus"
 license = "MIT"
 licenselink = "https://github.com/goofansu/hugo-modus/blob/main/LICENSE"
-description = "A Hugo theme inspired by Modus themes."
+description = "An opinioned Hugo theme using the Modus themes colors."
 
 # The home page of the theme, where the source can be found
 homepage = "https://github.com/goofansu/hugo-modus"
