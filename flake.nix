@@ -15,10 +15,9 @@
           with pkgs;
           mkShell {
             packages = [
+              go
               hugo
               tailwindcss_4
-              foreman
-              go
             ];
           };
       }

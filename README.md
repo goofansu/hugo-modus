@@ -16,8 +16,12 @@ Ref: https://gohugo.io/hugo-modules/use-modules/#use-a-module-for-a-theme
 
 ## Development
 
+### Watch for changes and rebuild CSS
 ```shell
-git clone https://github.com/goofansu/hugo-modus.git
-cd hugo-modus
-make dev
+make watch
+```
+
+### Serve exampleSite
+```shell
+make server
 ```
