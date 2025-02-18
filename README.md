@@ -4,15 +4,28 @@ An opinioned Hugo theme using the [colour palette of the Modus themes](https://p
 
 ## Installation
 
-Import the theme in `hugo.toml`:
-
-```toml
-[module]
-  [[module.imports]]
-    path = "github.com/goofansu/hugo-modus"
+### Git submodule
+```shell
+cd themes/
+git clone https://github.com/goofansu/hugo-modus.git
 ```
 
-Ref: https://gohugo.io/hugo-modules/use-modules/#use-a-module-for-a-theme
+### Hugo Modules
+
+See https://gohugo.io/hugo-modules/use-modules/#use-a-module-for-a-theme for details.
+
+1. Enable Hugo Modules in your project
+    ```shell
+    hugo mod init github.com/<your_user>/<your_project>
+    hugo mod get github.com/goofansu/hugo-modus
+    ```
+
+2. Import the theme in `hugo.toml`:
+    ```toml
+    [module]
+      [[module.imports]]
+        path = "github.com/goofansu/hugo-modus"
+    ```
 
 ## Development
 
