@@ -2,7 +2,7 @@
 <h1>{{ .Site.Params.Greeting | default "Welcome!" }}</h1>
 <p>{{ .Site.Params.Description | markdownify }}</p>
 
-<nav>
+<div>
   <h2>Index</h2>
   <ul class="mx-6 my-4 space-y-4 list-disc">
     {{ range .Sections.ByTitle }}
@@ -13,5 +13,5 @@
     </li>
     {{ end }}
   </ul>
-</nav>
+</div>
 {{ end }}
