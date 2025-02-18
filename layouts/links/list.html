@@ -2,17 +2,11 @@
 <h1>{{ .Title }}</h1>
 <p>{{ .Description | markdownify }}</p>
 
-{{ range .Pages }}
-<article class="pb-4 border-b border-operandi-gray dark:border-vivendi-gray">
-  {{ .Content }}
-
-  <nav>
-    <a href="{{ .RelPermalink }}">
-      <time class="text-sm" datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}">
-        {{ .Date.Format "Jan 2, 2006 3:04 PM" }}
-      </time>
-    </a>
-  </nav>
-</article>
-{{ end }}
+<ul class="space-y-4">
+  {{ range .Pages }}
+  <li>
+    {{ partial "til.html" . }}
+  </li>
+  {{ end }}
+</ul>
 {{ end }}

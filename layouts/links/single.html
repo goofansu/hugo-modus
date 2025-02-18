@@ -1,13 +1,7 @@
 {{ define "main" }}
-<article>
-  {{ .Content }}
+<nav class="mb-3">
+  <a href="/links/">« back to all Links</a>
+</nav>
 
-  <nav>
-    <a href="/links/">
-      <time class="text-sm" datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}">
-        « {{ .Date.Format "Jan 2, 2006 3:04 PM" }}
-      </time>
-    </a>
-  </nav>
-</article>
+{{ partial "til.html" . }}
 {{ end }}
