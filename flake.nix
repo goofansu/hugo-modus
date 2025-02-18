@@ -16,7 +16,7 @@
           mkShell {
             packages = [
               hugo
-              tailwindcss
+              tailwindcss_4
               foreman
               go
             ];
