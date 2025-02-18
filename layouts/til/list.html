@@ -1,6 +1,5 @@
 {{ define "main" }}
-<h1>TILs</h1>
-<p>{{ .Description | markdownify }}</p>
+{{ partial "page-header.html" .}}
 
 <ul class="space-y-4">
   {{ range .Pages }}
