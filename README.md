@@ -6,8 +6,8 @@ An opinioned Hugo theme using the [colour palette of the Modus themes](https://p
 
 ### Git submodule
 ```shell
-cd themes/
-git clone https://github.com/goofansu/hugo-modus.git
+git submodule add https://github.com/goofansu/hugo-modus.git themes/hugo-modus
+git submodule update --init --remote
 ```
 
 ### Hugo Modules
