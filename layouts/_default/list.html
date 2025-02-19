@@ -1,8 +1,4 @@
 {{ define "main" }}
-<header>
-  <h1>{{ .Title | default .Section }}</h1>
-  <p>{{ .Description | markdownify }}</p>
-</header>
-
+{{ partial "section-header.html" .}}
 {{ partial "page-list.html" .Pages }}
 {{ end }}

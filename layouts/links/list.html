@@ -1,23 +1,10 @@
 {{ define "main" }}
-<header>
-  <h1>Links</h1>
-  <p>{{ .Description | markdownify }}</p>
-</header>
+{{ partial "section-header.html" .}}
 
-<ul class="divide-y divide-operandi-gray dark:divide-operandi-gray">
+<ul>
   {{ range .Pages }}
-  <li class="py-4">
-    <article>
-      {{ .Content }}
-
-      <div>
-        <a href="{{ .RelPermalink }}">
-          <time datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}" class="text-sm">
-            {{ .Date.Format "3:04 PM ·  Jan 2, 2006" }}
-          </time>
-        </a>
-      </div>
-    </article>
+  <li class="pb-4 border-b border-operandi-gray dark:border-vivendi-gray">
+    {{ partial "article-item.html" . }}
   </li>
   {{ end }}
 </ul>

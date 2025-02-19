@@ -1,13 +1,10 @@
 {{ define "main" }}
-<header>
-  <h1>TILs</h1>
-  <p>{{ .Description | markdownify }}</p>
-</header>
+{{ partial "section-header.html" . }}
 
 <ul class="space-y-4">
   {{ range .Pages }}
   <li>
-    {{ partial "til.html" . }}
+    {{ partial "article-card.html" . }}
   </li>
   {{ end }}
 </ul>

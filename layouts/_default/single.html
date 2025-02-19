@@ -1,35 +1,4 @@
 {{ define "main" }}
-<article>
-  <header class="mb-10">
-    <h1>{{ .Title }}</h1>
-
-    <time class="text-operandi-black-dim dark:text-vivendi-white-dim"
-          datetime="{{ .Date.Format "2006-01-02" }}">
-      {{ .Date.Format "Jan 2, 2006" }}
-    </time>
-  </header>
-
-  {{ partial "headline-hash.html" .Content }}
-</article>
-
-{{ if or .PrevInSection .NextInSection }}
-<nav>
-  <hr class="my-10 border-t border-dashed">
-  <ul class="space-y-4">
-    {{ with .PrevInSection }}
-    <li>
-      <span>Previous:</span>
-      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-    </li>
-    {{ end }}
-
-    {{ with .NextInSection }}
-    <li>
-      <span>Next:</span>
-      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-    </li>
-    {{ end }}
-  </ul>
-</nav>
-{{ end }}
+{{ partial "article-post.html" . }}
+{{ partial "article-nav.html" . }}
 {{ end }}
