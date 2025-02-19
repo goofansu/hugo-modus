@@ -27,6 +27,18 @@ See https://gohugo.io/hugo-modules/use-modules/#use-a-module-for-a-theme for det
         path = "github.com/goofansu/hugo-modus"
     ```
 
+## Usage
+
+### New section
+```shell
+hugo new -k section posts/_index.md
+```
+
+### New post
+```shell
+hugo new posts/<title>.md
+```
+
 ## Development
 
 ### Watch for changes and rebuild CSS
