@@ -2,19 +2,15 @@
 <h1>{{ .Site.Params.Greeting | default "Welcome!" }}</h1>
 <p>{{ .Site.Params.Description | markdownify }}</p>
 
-<h2>Most recent 10 posts</h2>
-{{ $pages := first 10 (where .Site.RegularPages "Section" "in" .Site.MainSections) }}
-{{ partial "page-list.html" $pages }}
+{{ $pages := where .Site.RegularPages "Section" "in" .Site.MainSections }}
+{{ if le (len .Sections) 1 }}
+  {{ partial "page-list.html" $pages }}
+{{ else }}
+  <h2>Most recent 10 posts</h2>
+  {{ $pages := first 10 $pages }}
+  {{ partial "page-list.html" $pages }}
 
-{{ if gt (len .Sections) 1 }}
   <h2>Main content indexes</h2>
-  <ul class="mx-6 my-4 space-y-4 list-disc">
-    {{ range .Sections.ByTitle }}
-    <li>
-      <a href="{{ .RelPermalink }}" class="font-bold">{{ .Title | default .Section }}</a>
-      <span> :: {{ .Description }}</span>
-    </li>
-    {{ end }}
-  </ul>
+  {{ partial "section-indexes.html" . }}
 {{ end }}
 {{ end }}
