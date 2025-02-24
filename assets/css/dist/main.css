@@ -596,6 +596,10 @@
     }
   }
 
+  :is(article h2, article h3) .headline-hash {
+    opacity: 0;
+  }
+
   :is(article h2, article h3):hover .headline-hash {
     opacity: 1;
     transition-property: opacity;
@@ -875,10 +879,6 @@
 
   .no-underline {
     text-decoration-line: none;
-  }
-
-  .opacity-0 {
-    opacity: 0;
   }
 
   .shadow-xs {

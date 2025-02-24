@@ -213,6 +213,10 @@
     }
 
     h2, h3 {
+      .headline-hash {
+        @apply opacity-0;
+      }
+
       &:hover .headline-hash {
         @apply opacity-100 transition-opacity duration-700;
       }
