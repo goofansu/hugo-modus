@@ -5,7 +5,6 @@ theme = "modus"
 
 [params]
 description = "An opinioned Hugo theme using the [colour palette of the Modus themes](https://protesilaos.com/emacs/modus-themes-colors)."
-mainSections = ["posts", "til"]
 
 [markup]
   [markup.highlight]
@@ -13,5 +12,5 @@ mainSections = ["posts", "til"]
 
 [menus]
   [[menus.main]]
-    name = "Source"
+    name = "GitHub"
     url = "https://github.com/goofansu/hugo-modus"
