@@ -7,20 +7,20 @@
                text-operandi-black bg-operandi-white
                dark:text-vivendi-white dark:bg-vivendi-black">
     <header class="bg-operandi-white-dim dark:bg-vivendi-black-dim">
-      <div class="mx-auto max-w-2xl px-4 py-2">
+      <div class="mx-auto max-w-4xl px-4 py-2">
         {{ partial "header.html" . }}
       </div>
     </header>
 
     <main class="my-10">
-      <div class="mx-auto max-w-2xl px-4">
+      <div class="mx-auto max-w-4xl px-4">
         {{ block "main" . }}
         {{ end }}
       </div>
     </main>
 
     <footer class="text-operandi-black-alt dark:text-vivendi-white-alt">
-      <div class="mx-auto max-w-2xl p-4">
+      <div class="mx-auto max-w-4xl p-4">
         {{ partial "footer.html" . }}
       </div>
     </footer>
