@@ -596,6 +596,12 @@
     }
   }
 
+  article figure {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
   :is(article h2, article h3) .headline-hash {
     opacity: 0;
   }

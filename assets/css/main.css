@@ -212,6 +212,10 @@
              dark:text-vivendi-magenta-warmer;
     }
 
+    figure {
+      @apply flex justify-center items-center;
+    }
+
     h2, h3 {
       .headline-hash {
         @apply opacity-0;
