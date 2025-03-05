@@ -48,5 +48,5 @@ make watch
 
 ### Serve exampleSite
 ```shell
-make server
+make serve
 ```
