@@ -222,16 +222,24 @@
       }
     }
 
-    ol, ul {
-      @apply mx-6 my-4;
+    ul {
+      @apply list-disc;
     }
 
     ol {
       @apply list-decimal;
     }
 
-    ul {
-      @apply list-disc;
+    ul, ol {
+      @apply mx-6 my-4;
+    }
+
+    p:has(+ ul), p:has(+ ol) {
+      @apply mb-1;
+    }
+
+    p + ul, p + ol {
+      @apply mt-0;
     }
 
     .chroma {
