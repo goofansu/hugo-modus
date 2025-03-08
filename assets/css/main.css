@@ -189,9 +189,16 @@
 
   h3 {
     @apply mt-5 mb-3
-           text-lg font-semibold
+           text-xl font-semibold
            text-operandi-black-alt
            dark:text-vivendi-blue-faint;
+  }
+
+  h4 {
+    @apply mt-4 mb-2
+           text-lg font-medium
+           text-operandi-magenta
+           dark:text-vivendi-magenta;
   }
 
   p {
@@ -216,7 +223,7 @@
       @apply flex justify-center items-center;
     }
 
-    h2, h3 {
+    h2, h3, h4 {
       .headline-hash {
         @apply opacity-0;
       }

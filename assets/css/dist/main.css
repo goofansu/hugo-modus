@@ -549,8 +549,8 @@
   h3 {
     margin-top: calc(var(--spacing) * 5);
     margin-bottom: calc(var(--spacing) * 3);
-    font-size: var(--text-lg);
-    line-height: var(--tw-leading, var(--text-lg--line-height));
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
     color: var(--color-operandi-black-alt);
@@ -559,6 +559,22 @@
   @media (prefers-color-scheme: dark) {
     h3 {
       color: var(--color-vivendi-blue-faint);
+    }
+  }
+
+  h4 {
+    margin-top: calc(var(--spacing) * 4);
+    margin-bottom: calc(var(--spacing) * 2);
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-operandi-magenta);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    h4 {
+      color: var(--color-vivendi-magenta);
     }
   }
 
@@ -602,11 +618,11 @@
     display: flex;
   }
 
-  :is(article h2, article h3) .headline-hash {
+  :is(article h2, article h3, article h4) .headline-hash {
     opacity: 0;
   }
 
-  :is(article h2, article h3):hover .headline-hash {
+  :is(article h2, article h3, article h4):hover .headline-hash {
     opacity: 1;
     transition-property: opacity;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
