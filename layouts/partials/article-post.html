@@ -2,10 +2,12 @@
   <header class="mb-10">
     <h1>{{ .Title }}</h1>
 
+    {{ with .Date }}
     <time class="text-operandi-black-dim dark:text-vivendi-white-dim"
-          datetime="{{ .Date.Format "2006-01-02" }}">
-      {{ .Date.Format "Jan 2, 2006" }}
+          datetime="{{ .Format "2006-01-02" }}">
+      {{ .Format "Jan 2, 2006" }}
     </time>
+    {{ end }}
   </header>
 
   {{ partial "headline-hash.html" .Content }}
