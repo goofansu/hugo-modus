@@ -2,6 +2,7 @@ baseURL = "https://hugo-modus.vercel.app/"
 title = "hugo-modus"
 copyright = "&copy; 2025"
 theme = "modus"
+defaultContentLanguage = 'en'
 
 [params]
 description = "An opinionated Hugo theme using the [colour palette of the Modus themes](https://protesilaos.com/emacs/modus-themes-colors)."
@@ -14,3 +15,11 @@ description = "An opinionated Hugo theme using the [colour palette of the Modus 
   [[menus.main]]
     name = "GitHub"
     url = "https://github.com/goofansu/hugo-modus"
+
+[languages]
+  [languages.en]
+    languageName = 'English'
+    weight = 10
+  [languages.zh]
+    languageName = '中文'
+    weight = 20

@@ -5,4 +5,8 @@ watch:
 	tailwindcss -i assets/css/main.css -o assets/css/dist/main.css --optimize -w
 
 serve:
-	hugo server --disableFastRender --config exampleSite/hugo.toml --themesDir . -c exampleSite/content/ -t ""
+	hugo server \
+		--config exampleSite/hugo.toml \
+		--theme "" --themesDir . \
+		--contentDir exampleSite/content/ \
+		--disableFastRender --navigateToChanged --printI18nWarnings

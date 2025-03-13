@@ -1,0 +1,12 @@
+{{ if .IsTranslated }}
+<div class="border-l-2">
+  <ul class="ml-4 list-none">
+    {{ range .Translations }}
+    <li>
+      {{ .Language.LanguageName }}:
+      <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+    </li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}

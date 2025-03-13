@@ -8,6 +8,8 @@
       {{ .Format "Jan 2, 2006" }}
     </time>
     {{ end }}
+
+    {{ partial "translations.html" . }}
   </header>
 
   {{ partial "headline-hash.html" .Content }}
