@@ -3,8 +3,9 @@
 
 <ul>
   {{ range .Pages }}
-  <li class="pb-4 border-b border-operandi-gray dark:border-vivendi-gray">
+  <li>
     {{ partial "article-item.html" . }}
+    <hr class="my-8 border-t border-dashed">
   </li>
   {{ end }}
 </ul>
