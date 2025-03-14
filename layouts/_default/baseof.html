@@ -24,5 +24,9 @@
         {{ partial "footer.html" . }}
       </div>
     </footer>
+
+    {{ if templates.Exists "partials/scripts.html" }}
+      {{ partial "scripts.html" . }}
+    {{ end }}
   </body>
 </html>
