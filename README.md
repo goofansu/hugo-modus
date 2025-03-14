@@ -4,27 +4,32 @@ An opinionated Hugo theme using the [colour palette of the Modus themes](https:/
 
 ## Installation
 
-### Git submodule
-```shell
-git submodule add https://github.com/goofansu/hugo-modus.git themes/hugo-modus
-git submodule update --init --recursive
-```
-
 ### Hugo Modules
+If your project is using [Hugo Modules](https://gohugo.io/hugo-modules/use-modules/#use-a-module-for-a-theme):
 
-See https://gohugo.io/hugo-modules/use-modules/#use-a-module-for-a-theme for details.
-
-1. Enable Hugo Modules in your project
+1. Get theme in your project
     ```shell
-    hugo mod init github.com/<your_user>/<your_project>
     hugo mod get github.com/goofansu/hugo-modus
     ```
 
-2. Import the theme in `hugo.toml`:
+2. Configure the theme in `hugo.toml`:
     ```toml
     [module]
       [[module.imports]]
         path = "github.com/goofansu/hugo-modus"
+    ```
+
+### Git submodule
+
+1. Get theme in your project
+    ```shell
+    git submodule add https://github.com/goofansu/hugo-modus.git themes/hugo-modus
+    git submodule update --init --recursive
+    ```
+
+2. Configure the theme in `hugo.toml`
+    ```
+    theme = "hugo-modus"
     ```
 
 ## Usage
@@ -34,9 +39,9 @@ See https://gohugo.io/hugo-modules/use-modules/#use-a-module-for-a-theme for det
 hugo new -k section posts/_index.md
 ```
 
-### New post
+### New content
 ```shell
-hugo new posts/<title>.md
+hugo new posts/your-first-post.md
 ```
 
 ## Development
