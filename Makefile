@@ -4,7 +4,7 @@ build:
 watch:
 	tailwindcss -i assets/css/main.css -o assets/css/dist/main.css --optimize -w
 
-serve:
+dev:
 	hugo server \
 		--config exampleSite/hugo.toml \
 		--theme "" --themesDir . \
