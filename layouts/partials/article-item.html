@@ -1,11 +1,9 @@
 <article>
   {{ .Content }}
-
-  <div>
-    <a href="{{ .RelPermalink }}">
-      <time datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}" class="text-sm">
-        {{ .Date.Format "3:04 PM ·  Jan 2, 2006" }}
-      </time>
-    </a>
-  </div>
 </article>
+
+<p>
+  {{ partial "datetime-link.html" . }}
+</p>
+
+<hr class="my-8 border-t border-dashed">
