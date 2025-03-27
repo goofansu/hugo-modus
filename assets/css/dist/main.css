@@ -644,6 +644,10 @@
     margin-block: calc(var(--spacing) * 4);
   }
 
+  article li > ul, article li > ol {
+    margin-top: calc(var(--spacing) * 0);
+  }
+
   article p:has( + ul), article p:has( + ol) {
     margin-bottom: calc(var(--spacing) * 1);
   }

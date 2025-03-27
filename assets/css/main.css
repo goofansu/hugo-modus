@@ -245,6 +245,10 @@
       @apply mx-6 my-4;
     }
 
+    li > ul, li > ol {
+      @apply mt-0;
+    }
+
     p:has(+ ul), p:has(+ ol) {
       @apply mb-1;
     }
