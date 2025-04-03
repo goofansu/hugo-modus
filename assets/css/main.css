@@ -278,6 +278,12 @@
       }
     }
 
+    #TableOfContents {
+      ul {
+        @apply my-1;
+      }
+    }
+
     .footnotes {
       @apply mt-10;
     }

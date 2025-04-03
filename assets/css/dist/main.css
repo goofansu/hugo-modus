@@ -693,6 +693,10 @@
     }
   }
 
+  article #TableOfContents ul {
+    margin-block: calc(var(--spacing) * 1);
+  }
+
   article .footnotes {
     margin-top: calc(var(--spacing) * 10);
   }
@@ -739,6 +743,10 @@
 
   .mb-10 {
     margin-bottom: calc(var(--spacing) * 10);
+  }
+
+  .ml-1 {
+    margin-left: calc(var(--spacing) * 1);
   }
 
   .ml-4 {
