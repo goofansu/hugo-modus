@@ -51,7 +51,7 @@ hugo new posts/your-first-post.md
 make watch
 ```
 
-### Serve exampleSite
+### Start the Hugo server for developing
 ```shell
-make serve
+make dev
 ```
