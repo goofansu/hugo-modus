@@ -2,7 +2,10 @@
   {{ range .Sections.ByTitle }}
   <li>
     <a href="{{ .RelPermalink }}" class="font-bold">{{ .Title }}</a>
-    <span> :: {{ .Description }}</span>
+
+    {{ with .Description }}
+    <span>:: {{ . }}</span>
+    {{ end }}
   </li>
   {{ end }}
 </ul>

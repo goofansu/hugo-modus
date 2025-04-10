@@ -6,7 +6,7 @@ watch:
 
 dev:
 	hugo server \
-		--config exampleSite/hugo.toml \
+		--config hugo.toml \
 		--theme "" --themesDir . \
-		--contentDir exampleSite/content/ \
+		--contentDir content \
 		--disableFastRender --navigateToChanged --printI18nWarnings
