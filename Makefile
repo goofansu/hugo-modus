@@ -1,8 +1,4 @@
-build:
-	tailwindcss -i assets/css/main.css -o assets/css/dist/main.css --optimize
-
-watch:
-	tailwindcss -i assets/css/main.css -o assets/css/dist/main.css --optimize -w
+.PHONY: dev watch dist
 
 dev:
 	hugo server \
@@ -12,3 +8,9 @@ dev:
 		--disableFastRender \
 		--navigateToChanged \
 		--printI18nWarnings
+
+watch:
+	tailwindcss -i assets/css/main.css -o assets/css/dist/main.css --optimize -w
+
+dist:
+	tailwindcss -i assets/css/main.css -o assets/css/dist/main.css --optimize
