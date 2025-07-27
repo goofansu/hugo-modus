@@ -7,12 +7,12 @@
   <nav>
     <ul class="flex space-x-4">
       {{ range .Site.Menus.main }}
-      <li>
-        <a href="{{ .URL }}"
-           class="no-underline text-current hover:bg-transparent">
-          {{ .Name }}
-        </a>
-      </li>
+        <li>
+          <a href="{{ .URL }}"
+             class="no-underline text-current hover:bg-transparent">
+            {{ .Name }}
+          </a>
+        </li>
       {{ end }}
     </ul>
   </nav>

@@ -1,20 +1,20 @@
 {{ define "main" }}
-{{ partial "section-header.html" . }}
-{{ range .Data.Terms.Alphabetical }}
-<h2>
-  <a href="{{ .Page.RelPermalink }}">
-    {{ .Page.Title }}
-  </a>
-</h2>
+  {{ partial "section-header.html" . }}
+  {{ range .Data.Terms.Alphabetical }}
+    <h2>
+      <a href="{{ .Page.RelPermalink }}">
+        {{ .Page.Title }}
+      </a>
+    </h2>
 
-<ol class="mx-6 my-4 list-decimal">
-  {{ range .Pages.ByDate }}
-  <li>
-    <a href="{{ .RelPermalink }}">
-      {{ .Page.Title }}
-    </a>
-  </li>
+    <ol class="mx-6 my-4 list-decimal">
+      {{ range .Pages.ByDate }}
+        <li>
+          <a href="{{ .RelPermalink }}">
+            {{ .Page.Title }}
+          </a>
+        </li>
+      {{ end }}
+    </ol>
   {{ end }}
-</ol>
-{{ end }}
 {{ end }}

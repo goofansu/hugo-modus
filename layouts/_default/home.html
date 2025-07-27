@@ -1,16 +1,16 @@
 {{ define "main" }}
-<h1>{{ .Site.Params.Greeting | default "Welcome!" }}</h1>
-<p>{{ .Site.Params.Description | markdownify }}</p>
+  <h1>{{ .Site.Params.Greeting | default "Welcome!" }}</h1>
+  <p>{{ .Site.Params.Description | markdownify }}</p>
 
-{{ $pages := where .Site.RegularPages "Section" "in" .Site.MainSections }}
-{{ if le (len .Sections) 1 }}
-  {{ partial "page-list.html" $pages }}
-{{ else }}
-  <h2>Most recent 10 posts</h2>
-  {{ $pages := first 10 $pages }}
-  {{ partial "page-list.html" $pages }}
+  {{ $pages := where .Site.RegularPages "Section" "in" .Site.MainSections }}
+  {{ if le (len .Sections) 1 }}
+    {{ partial "page-list.html" $pages }}
+  {{ else }}
+    <h2>Most recent 10 posts</h2>
+    {{ $pages := first 10 $pages }}
+    {{ partial "page-list.html" $pages }}
 
-  <h2>Main content indexes</h2>
-  {{ partial "section-indexes.html" . }}
-{{ end }}
+    <h2>Main content indexes</h2>
+    {{ partial "section-indexes.html" . }}
+  {{ end }}
 {{ end }}

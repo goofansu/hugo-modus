@@ -1,11 +1,11 @@
 {{ define "main" }}
-{{ partial "section-header.html" .}}
+  {{ partial "section-header.html" .}}
 
-<ul>
-  {{ range .Pages }}
-  <li>
-    {{ partial "article-item.html" . }}
-  </li>
-  {{ end }}
-</ul>
+  <ul>
+    {{ range .Pages }}
+      <li>
+        {{ partial "article-item.html" . }}
+      </li>
+    {{ end }}
+  </ul>
 {{ end }}
