@@ -210,7 +210,9 @@
       @apply my-6 py-2 pl-6
              border-l-8 border-solid
              border-operandi-blue-warmer
-             dark:border-vivendi-blue-warmer;
+             bg-operandi-nuanced-blue
+             dark:border-vivendi-blue-warmer
+             dark:bg-vivendi-nuanced-blue;
     }
 
     code {
