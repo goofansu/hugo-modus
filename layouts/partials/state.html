@@ -1,0 +1,8 @@
+{{ with .Params.state }}
+  <div class="text-sm mb-2">
+    {{- if eq . "seedling" -}}🌱 SEEDLING
+    {{- else if eq . "budding" -}}🪷 BUDDING
+    {{- else if eq . "evergreen" -}}🌲 EVERGREEN
+    {{- end -}}
+  </div>
+{{ end }}
