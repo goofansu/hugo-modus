@@ -702,6 +702,92 @@
   article .footnotes {
     margin-top: calc(var(--spacing) * 10);
   }
+
+  article table {
+    margin-block: calc(var(--spacing) * 6);
+    border-collapse: collapse;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  article .table-wrapper {
+    overflow-x: auto;
+  }
+
+  article thead {
+    background-color: var(--color-operandi-nuanced-blue);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    article thead {
+      background-color: var(--color-vivendi-nuanced-blue);
+    }
+  }
+
+  article th {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+    border-color: var(--color-operandi-gray);
+    padding-inline: calc(var(--spacing) * 4);
+    padding-block: calc(var(--spacing) * 3);
+    text-align: left;
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-operandi-black-alt);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    article th {
+      border-color: var(--color-vivendi-gray);
+      color: var(--color-vivendi-white);
+    }
+  }
+
+  article td {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+    border-color: var(--color-operandi-gray);
+    padding-inline: calc(var(--spacing) * 4);
+    padding-block: calc(var(--spacing) * 2);
+    color: var(--color-operandi-black);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    article td {
+      border-color: var(--color-vivendi-gray);
+      color: var(--color-vivendi-white);
+    }
+  }
+
+  article tbody tr {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+
+  @media (hover: hover) {
+    article tbody tr:hover {
+      background-color: var(--color-operandi-nuanced-yellow);
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    @media (hover: hover) {
+      article tbody tr:hover {
+        background-color: var(--color-vivendi-nuanced-yellow);
+      }
+    }
+  }
+
+  article tbody tr:nth-child(2n) {
+    background-color: var(--color-operandi-white-dim);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    article tbody tr:nth-child(2n) {
+      background-color: var(--color-vivendi-black-dim);
+    }
+  }
 }
 
 @layer components;
@@ -735,6 +821,10 @@
     margin-top: calc(var(--spacing) * 6);
   }
 
+  .mb-2 {
+    margin-bottom: calc(var(--spacing) * 2);
+  }
+
   .mb-3 {
     margin-bottom: calc(var(--spacing) * 3);
   }
@@ -765,6 +855,10 @@
 
   .grid {
     display: grid;
+  }
+
+  .table {
+    display: table;
   }
 
   .max-w-4xl {

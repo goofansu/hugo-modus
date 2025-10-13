@@ -289,5 +289,48 @@
     .footnotes {
       @apply mt-10;
     }
+
+    table {
+      @apply w-full my-6
+             border-collapse
+             overflow-hidden;
+    }
+
+    .table-wrapper {
+      @apply overflow-x-auto;
+    }
+
+    thead {
+      @apply bg-operandi-nuanced-blue
+             dark:bg-vivendi-nuanced-blue;
+    }
+
+    th {
+      @apply px-4 py-3
+             text-left font-semibold
+             border border-operandi-gray
+             text-operandi-black-alt
+             dark:border-vivendi-gray
+             dark:text-vivendi-white;
+    }
+
+    td {
+      @apply px-4 py-2
+             border border-operandi-gray
+             text-operandi-black
+             dark:border-vivendi-gray
+             dark:text-vivendi-white;
+    }
+
+    tbody tr {
+      @apply hover:bg-operandi-nuanced-yellow
+             dark:hover:bg-vivendi-nuanced-yellow
+             transition-colors;
+    }
+
+    tbody tr:nth-child(even) {
+      @apply bg-operandi-white-dim
+             dark:bg-vivendi-black-dim;
+    }
   }
 }
