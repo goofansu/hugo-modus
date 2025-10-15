@@ -309,6 +309,10 @@
         @apply hidden sm:table-cell;
       }
 
+      th:last-child {
+        @apply text-right;
+      }
+
       td {
         @apply py-2 px-4
                text-operandi-black
@@ -317,6 +321,10 @@
 
       td:not(:first-child):not(:last-child) {
         @apply hidden sm:table-cell;
+      }
+
+      td:last-child {
+        @apply text-right;
       }
 
       tbody tr {

@@ -746,6 +746,10 @@
     }
   }
 
+  article table th:last-child {
+    text-align: right;
+  }
+
   article table td {
     padding-inline: calc(var(--spacing) * 4);
     padding-block: calc(var(--spacing) * 2);
@@ -766,6 +770,10 @@
     article table td:not(:first-child):not(:last-child) {
       display: table-cell;
     }
+  }
+
+  article table td:last-child {
+    text-align: right;
   }
 
   article table tbody tr {
