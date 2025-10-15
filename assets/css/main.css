@@ -291,46 +291,37 @@
     }
 
     table {
-      @apply w-full my-6
-             border-collapse
-             overflow-hidden;
-    }
+      @apply w-full text-sm;
 
-    .table-wrapper {
-      @apply overflow-x-auto;
-    }
+      thead {
+        @apply border-b border-operandi-gray
+               dark:border-vivendi-gray;
+      }
 
-    thead {
-      @apply bg-operandi-nuanced-blue
-             dark:bg-vivendi-nuanced-blue;
-    }
+      th {
+        @apply py-2 px-4
+               text-left font-bold
+               text-operandi-black
+               dark:text-vivendi-white;
+      }
 
-    th {
-      @apply px-4 py-3
-             text-left font-semibold
-             border border-operandi-gray
-             text-operandi-black-alt
-             dark:border-vivendi-gray
-             dark:text-vivendi-white;
-    }
+      td {
+        @apply py-2 px-4
+               text-operandi-black
+               dark:text-vivendi-white;
+      }
 
-    td {
-      @apply px-4 py-2
-             border border-operandi-gray
-             text-operandi-black
-             dark:border-vivendi-gray
-             dark:text-vivendi-white;
-    }
+      tbody tr {
+        @apply border-b border-operandi-gray
+               dark:border-vivendi-gray
+               transition-colors
+               hover:bg-operandi-nuanced-cyan
+               dark:hover:bg-vivendi-nuanced-cyan;
+      }
 
-    tbody tr {
-      @apply hover:bg-operandi-nuanced-yellow
-             dark:hover:bg-vivendi-nuanced-yellow
-             transition-colors;
-    }
-
-    tbody tr:nth-child(even) {
-      @apply bg-operandi-white-dim
-             dark:bg-vivendi-black-dim;
+      tbody tr:last-child {
+        @apply border-0;
+      }
     }
   }
 }
