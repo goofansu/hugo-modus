@@ -736,6 +736,16 @@
     }
   }
 
+  article table th:not(:first-child):not(:last-child) {
+    display: none;
+  }
+
+  @media (width >= 40rem) {
+    article table th:not(:first-child):not(:last-child) {
+      display: table-cell;
+    }
+  }
+
   article table td {
     padding-inline: calc(var(--spacing) * 4);
     padding-block: calc(var(--spacing) * 2);
@@ -745,6 +755,16 @@
   @media (prefers-color-scheme: dark) {
     article table td {
       color: var(--color-vivendi-white);
+    }
+  }
+
+  article table td:not(:first-child):not(:last-child) {
+    display: none;
+  }
+
+  @media (width >= 40rem) {
+    article table td:not(:first-child):not(:last-child) {
+      display: table-cell;
     }
   }
 

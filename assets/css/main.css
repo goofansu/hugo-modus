@@ -305,10 +305,18 @@
                dark:text-vivendi-white;
       }
 
+      th:not(:first-child):not(:last-child) {
+        @apply hidden sm:table-cell;
+      }
+
       td {
         @apply py-2 px-4
                text-operandi-black
                dark:text-vivendi-white;
+      }
+
+      td:not(:first-child):not(:last-child) {
+        @apply hidden sm:table-cell;
       }
 
       tbody tr {
