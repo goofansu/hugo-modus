@@ -4,7 +4,7 @@
 
     <h1>{{ .Title }}</h1>
 
-    {{ with .Date }}
+    {{ with or .Lastmod .Date }}
       <time class="text-operandi-black-dim dark:text-vivendi-white-dim"
             datetime="{{ .Format "2006-01-02" }}">
         {{ .Format "Jan 2, 2006" }}
