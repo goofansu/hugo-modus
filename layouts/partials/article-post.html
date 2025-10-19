@@ -4,16 +4,24 @@
 
     <h1>{{ .Title }}</h1>
 
-    {{ with or .Lastmod .Date }}
-      <time class="text-operandi-black-dim dark:text-vivendi-white-dim"
-            datetime="{{ .Format "2006-01-02" }}">
-        {{ .Format "Jan 2, 2006" }}
-      </time>
-    {{ end }}
-
     {{ partial "translations.html" . }}
   </header>
 
   {{ partial "toc.html" . }}
   {{ partial "headline-hash.html" .Content }}
+
+  {{ with .Date }}
+    <p class="my-10 text-sm italic">
+      <span>Written on</span>
+      <time class="font-semibold" datetime="{{ .Format "2006-01-02" }}">
+        {{ .Format "Jan 2, 2006" }}
+      </time>
+      {{ if and $.Lastmod (ne ($.Lastmod.Format "2006-01-02") (.Format "2006-01-02")) }}
+        <span>and updated on</span>
+        <time class="font-semibold" datetime="{{ $.Lastmod.Format "2006-01-02" }}">
+          {{ $.Lastmod.Format "Jan 2, 2006" }}
+        </time>
+      {{ end }}
+    </p>
+  {{ end }}
 </article>

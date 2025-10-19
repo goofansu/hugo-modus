@@ -1050,6 +1050,10 @@
     color: var(--color-operandi-black-dim);
   }
 
+  .italic {
+    font-style: italic;
+  }
+
   .no-underline {
     text-decoration-line: none;
   }
