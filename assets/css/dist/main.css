@@ -659,40 +659,8 @@
   }
 
   article .chroma {
-    background-color: var(--color-operandi-white-dim);
     padding: calc(var(--spacing) * 2);
     overflow-x: auto;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    article .chroma {
-      background-color: var(--color-vivendi-black-dim);
-    }
-  }
-
-  article .chroma .line {
-    color: var(--color-operandi-black);
-  }
-
-  @media (prefers-color-scheme: dark) {
-    article .chroma .line {
-      color: var(--color-vivendi-white);
-    }
-  }
-
-  article .chroma .line.hl {
-    margin: calc(var(--spacing) * -1);
-    border-left-style: var(--tw-border-style);
-    border-left-width: 4px;
-    border-color: var(--color-operandi-black-dim);
-    background-color: var(--color-operandi-gray);
-  }
-
-  @media (prefers-color-scheme: dark) {
-    article .chroma .line.hl {
-      border-color: var(--color-vivendi-white-dim);
-      background-color: var(--color-vivendi-gray);
-    }
   }
 
   article #TableOfContents ul {

@@ -260,24 +260,7 @@
     }
 
     .chroma {
-      @apply p-2
-             overflow-x-auto
-             bg-operandi-white-dim
-             dark:bg-vivendi-black-dim;
-
-      .line {
-        @apply text-operandi-black
-               dark:text-vivendi-white;
-      }
-
-      .line.hl {
-        @apply -m-1
-               bg-operandi-gray
-               border-l-4
-               border-operandi-black-dim
-               dark:bg-vivendi-gray
-               dark:border-vivendi-white-dim;
-      }
+      @apply p-2 overflow-x-auto;
     }
 
     #TableOfContents {

@@ -36,6 +36,12 @@
 {{ $style := resources.Get "css/dist/main.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
+<!-- Modus Chroma syntax highlighting -->
+{{ $operandi := resources.Get "css/dist/operandi-chroma-style.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $operandi.RelPermalink }}" media="(prefers-color-scheme: light)">
+{{ $vivendi := resources.Get "css/dist/vivendi-chroma-style.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $vivendi.RelPermalink }}" media="(prefers-color-scheme: dark)">
+
 {{ with .OutputFormats.Get "rss" -}}
   {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
 {{ end }}
