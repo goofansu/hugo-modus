@@ -659,7 +659,8 @@
   }
 
   article .chroma {
-    padding: calc(var(--spacing) * 2);
+    border-radius: var(--radius-lg);
+    padding: calc(var(--spacing) * 4);
     overflow-x: auto;
   }
 
@@ -916,6 +917,10 @@
 
   .rounded-full {
     border-radius: 3.40282e38px;
+  }
+
+  .rounded-lg {
+    border-radius: var(--radius-lg);
   }
 
   .border {

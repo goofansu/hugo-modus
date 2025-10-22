@@ -260,7 +260,7 @@
     }
 
     .chroma {
-      @apply p-2 overflow-x-auto;
+      @apply p-4 overflow-x-auto rounded-lg;
     }
 
     #TableOfContents {
