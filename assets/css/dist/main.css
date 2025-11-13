@@ -631,7 +631,13 @@
     border-width: 1px;
     border-color: var(--color-operandi-gray);
     padding: calc(var(--spacing) * 1);
-    opacity: 0;
+    opacity: 1;
+  }
+
+  @media (width >= 48rem) {
+    :is(article h2, article h3, article h4) .headline-hash {
+      opacity: 0;
+    }
   }
 
   @media (prefers-color-scheme: dark) {
