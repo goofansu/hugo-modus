@@ -631,7 +631,7 @@
     border-width: 1px;
     border-color: var(--color-operandi-gray);
     padding: calc(var(--spacing) * 1);
-    opacity: 0;
+    display: none;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -641,12 +641,7 @@
   }
 
   :is(article h2, article h3, article h4):hover .headline-hash {
-    opacity: 1;
-    transition-property: opacity;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
-    --tw-duration: .3s;
-    transition-duration: .3s;
+    display: block;
   }
 
   article ul {
@@ -1234,9 +1229,4 @@
   syntax: "*";
   inherits: false;
   initial-value: "";
-}
-
-@property --tw-duration {
-  syntax: "*";
-  inherits: false
 }

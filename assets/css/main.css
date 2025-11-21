@@ -229,11 +229,11 @@
       @apply flex items-center;
 
       .headline-hash {
-        @apply opacity-0 border border-operandi-gray dark:border-vivendi-gray rounded-lg p-1;
+        @apply hidden border border-operandi-gray dark:border-vivendi-gray rounded-lg p-1;
       }
 
       &:hover .headline-hash {
-        @apply opacity-100 transition-opacity duration-300;
+        @apply block;
       }
     }
 
