@@ -162,7 +162,7 @@
 
 @layer base {
   body {
-    @apply text-base font-sans
+    @apply text-base md:text-lg font-sans
            text-operandi-black dark:text-vivendi-white
            bg-operandi-white dark:bg-vivendi-black;
   }
@@ -181,14 +181,14 @@
   }
 
   h1 {
-    @apply text-6xl text-balance font-serif font-medium
+    @apply text-3xl md:text-5xl text-balance font-serif font-medium
            text-operandi-black dark:text-vivendi-white;
   }
 
   h2,
   h3,
   h4 {
-    @apply mt-10 mb-4 text-4xl font-serif font-medium;
+    @apply mt-10 mb-4 text-2xl md:text-4xl font-serif font-medium;
   }
 
   p {
