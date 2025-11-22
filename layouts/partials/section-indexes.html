@@ -1,8 +1,8 @@
-<div>
+<nav class="my-4">
   {{ range $index, $section := .Sections.ByTitle }}
     {{ if $index }} / {{ end }}
     <a href="{{ $section.RelPermalink }}">
       {{- $section.Title -}}
     </a>
   {{ end }}
-</div>
+</nav>
