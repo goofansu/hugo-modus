@@ -1,7 +1,7 @@
 <div>
   {{ range $index, $section := .Sections.ByTitle }}
     {{ if $index }} / {{ end }}
-    <a href="{{ $section.RelPermalink }}" class="font-bold">
+    <a href="{{ $section.RelPermalink }}">
       {{- $section.Title -}}
     </a>
   {{ end }}
