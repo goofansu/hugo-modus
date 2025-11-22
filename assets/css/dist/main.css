@@ -481,6 +481,21 @@
     display: none !important;
   }
 
+  body {
+    background-color: var(--color-operandi-white);
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    line-height: var(--tw-leading, var(--text-base--line-height));
+    color: var(--color-operandi-black);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: var(--color-vivendi-black);
+      color: var(--color-vivendi-white);
+    }
+  }
+
   a {
     color: var(--color-operandi-blue-warmer);
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
@@ -517,10 +532,12 @@
   }
 
   h1 {
-    font-size: var(--text-4xl);
-    line-height: var(--tw-leading, var(--text-4xl--line-height));
-    --tw-font-weight: var(--font-weight-extrabold);
-    font-weight: var(--font-weight-extrabold);
+    font-family: var(--font-serif);
+    font-size: var(--text-6xl);
+    line-height: var(--tw-leading, var(--text-6xl--line-height));
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+    text-wrap: balance;
     color: var(--color-operandi-black);
   }
 
@@ -530,52 +547,14 @@
     }
   }
 
-  h2 {
-    margin-top: calc(var(--spacing) * 6);
+  h2, h3, h4 {
+    margin-top: calc(var(--spacing) * 10);
     margin-bottom: calc(var(--spacing) * 4);
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
-    --tw-font-weight: var(--font-weight-bold);
-    font-weight: var(--font-weight-bold);
-    color: var(--color-operandi-yellow-faint);
-  }
-
-  @media (prefers-color-scheme: dark) {
-    h2 {
-      color: var(--color-vivendi-yellow-faint);
-    }
-  }
-
-  h3 {
-    margin-top: calc(var(--spacing) * 5);
-    margin-bottom: calc(var(--spacing) * 3);
-    font-size: var(--text-xl);
-    line-height: var(--tw-leading, var(--text-xl--line-height));
-    --tw-font-weight: var(--font-weight-semibold);
-    font-weight: var(--font-weight-semibold);
-    color: var(--color-operandi-black-alt);
-  }
-
-  @media (prefers-color-scheme: dark) {
-    h3 {
-      color: var(--color-vivendi-blue-faint);
-    }
-  }
-
-  h4 {
-    margin-top: calc(var(--spacing) * 4);
-    margin-bottom: calc(var(--spacing) * 2);
-    font-size: var(--text-lg);
-    line-height: var(--tw-leading, var(--text-lg--line-height));
+    font-family: var(--font-serif);
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
-    color: var(--color-operandi-magenta);
-  }
-
-  @media (prefers-color-scheme: dark) {
-    h4 {
-      color: var(--color-vivendi-magenta);
-    }
   }
 
   p {
@@ -620,7 +599,38 @@
     display: flex;
   }
 
+  article h2 {
+    color: var(--color-operandi-yellow-faint);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    article h2 {
+      color: var(--color-vivendi-yellow-faint);
+    }
+  }
+
+  article h3 {
+    color: var(--color-operandi-blue-faint);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    article h3 {
+      color: var(--color-vivendi-blue-faint);
+    }
+  }
+
+  article h4 {
+    color: var(--color-operandi-magenta);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    article h4 {
+      color: var(--color-vivendi-magenta);
+    }
+  }
+
   article h2, article h3, article h4 {
+    font-family: var(--font-serif);
     align-items: center;
     display: flex;
   }
@@ -670,6 +680,7 @@
   }
 
   article .chroma {
+    margin-block: calc(var(--spacing) * 4);
     border-radius: var(--radius-lg);
     padding: calc(var(--spacing) * 4);
     overflow-x: auto;
@@ -967,10 +978,6 @@
     background-color: var(--color-operandi-subtle-blue);
   }
 
-  .bg-operandi-white {
-    background-color: var(--color-operandi-white);
-  }
-
   .bg-operandi-white-dim {
     background-color: var(--color-operandi-white-dim);
   }
@@ -993,10 +1000,6 @@
 
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
-  }
-
-  .font-sans {
-    font-family: var(--font-sans);
   }
 
   .font-serif {
@@ -1076,10 +1079,6 @@
   @media (prefers-color-scheme: dark) {
     .dark\:border-vivendi-gray {
       border-color: var(--color-vivendi-gray);
-    }
-
-    .dark\:bg-vivendi-black {
-      background-color: var(--color-vivendi-black);
     }
 
     .dark\:bg-vivendi-black-dim {

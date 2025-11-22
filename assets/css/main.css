@@ -161,6 +161,12 @@
 }
 
 @layer base {
+  body {
+    @apply text-base font-sans
+           text-operandi-black dark:text-vivendi-white
+           bg-operandi-white dark:bg-vivendi-black;
+  }
+
   a {
     @apply underline
            text-operandi-blue-warmer
@@ -175,30 +181,14 @@
   }
 
   h1 {
-    @apply text-4xl font-extrabold
-           text-operandi-black
-           dark:text-vivendi-white;
+    @apply text-6xl text-balance font-serif font-medium
+           text-operandi-black dark:text-vivendi-white;
   }
 
-  h2 {
-    @apply mt-6 mb-4
-           text-2xl font-bold
-           text-operandi-yellow-faint
-           dark:text-vivendi-yellow-faint;
-  }
-
-  h3 {
-    @apply mt-5 mb-3
-           text-xl font-semibold
-           text-operandi-black-alt
-           dark:text-vivendi-blue-faint;
-  }
-
+  h2,
+  h3,
   h4 {
-    @apply mt-4 mb-2
-           text-lg font-medium
-           text-operandi-magenta
-           dark:text-vivendi-magenta;
+    @apply mt-10 mb-4 text-4xl font-serif font-medium;
   }
 
   p {
@@ -225,8 +215,22 @@
       @apply flex justify-center items-center;
     }
 
-    h2, h3, h4 {
-      @apply flex items-center;
+    h2 {
+      @apply text-operandi-yellow-faint dark:text-vivendi-yellow-faint;
+    }
+
+    h3 {
+      @apply text-operandi-blue-faint dark:text-vivendi-blue-faint;
+    }
+
+    h4 {
+      @apply text-operandi-magenta dark:text-vivendi-magenta;
+    }
+
+    h2,
+    h3,
+    h4 {
+      @apply font-serif flex items-center;
 
       .headline-hash {
         @apply hidden border border-operandi-gray dark:border-vivendi-gray rounded-lg p-1;
@@ -245,24 +249,28 @@
       @apply list-decimal;
     }
 
-    ul, ol {
+    ul,
+    ol {
       @apply mx-6 my-4;
     }
 
-    li > ul, li > ol {
+    li > ul,
+    li > ol {
       @apply mt-0;
     }
 
-    p:has(+ ul), p:has(+ ol) {
+    p:has(+ ul),
+    p:has(+ ol) {
       @apply mb-1;
     }
 
-    p + ul, p + ol {
+    p + ul,
+    p + ol {
       @apply mt-0;
     }
 
     .chroma {
-      @apply p-4 overflow-x-auto rounded-lg;
+      @apply my-4 p-4 overflow-x-auto rounded-lg;
     }
 
     #TableOfContents {
