@@ -884,9 +884,9 @@
     display: table;
   }
 
-  .size-5 {
-    width: calc(var(--spacing) * 5);
-    height: calc(var(--spacing) * 5);
+  .size-6 {
+    width: calc(var(--spacing) * 6);
+    height: calc(var(--spacing) * 6);
   }
 
   .max-w-4xl {
@@ -895,10 +895,6 @@
 
   .list-decimal {
     list-style-type: decimal;
-  }
-
-  .list-disc {
-    list-style-type: disc;
   }
 
   .list-none {

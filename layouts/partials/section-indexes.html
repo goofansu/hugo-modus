@@ -1,11 +1,8 @@
-<ul class="mx-6 my-4 space-y-4 list-disc">
-  {{ range .Sections.ByTitle }}
-    <li>
-      <a href="{{ .RelPermalink }}" class="font-bold">{{ .Title }}</a>
-
-      {{ with .Description }}
-        <span>— {{ . }}</span>
-      {{ end }}
-    </li>
+<div>
+  {{ range $index, $section := .Sections.ByTitle }}
+    {{ if $index }} / {{ end }}
+    <a href="{{ $section.RelPermalink }}" class="font-bold">
+      {{- $section.Title -}}
+    </a>
   {{ end }}
-</ul>
+</div>
