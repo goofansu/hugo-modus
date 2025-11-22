@@ -483,7 +483,7 @@
 
   body {
     background-color: var(--color-operandi-white);
-    font-family: var(--font-sans);
+    font-family: var(--font-serif);
     font-size: var(--text-base);
     line-height: var(--tw-leading, var(--text-base--line-height));
     color: var(--color-operandi-black);
@@ -539,7 +539,6 @@
   }
 
   h1 {
-    font-family: var(--font-serif);
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
     --tw-font-weight: var(--font-weight-medium);
@@ -564,7 +563,6 @@
   h2, h3, h4 {
     margin-top: calc(var(--spacing) * 10);
     margin-bottom: calc(var(--spacing) * 4);
-    font-family: var(--font-serif);
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
     --tw-font-weight: var(--font-weight-medium);
@@ -602,7 +600,6 @@
   }
 
   article code {
-    font-family: var(--font-mono);
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
     color: var(--color-operandi-magenta-warmer);
@@ -651,7 +648,6 @@
   }
 
   article h2, article h3, article h4 {
-    font-family: var(--font-serif);
     align-items: center;
     display: flex;
   }
@@ -1017,10 +1013,6 @@
 
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
-  }
-
-  .font-serif {
-    font-family: var(--font-serif);
   }
 
   .text-base {

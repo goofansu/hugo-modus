@@ -162,18 +162,15 @@
 
 @layer base {
   body {
-    @apply text-base md:text-lg font-sans
+    @apply text-base md:text-lg font-serif
            text-operandi-black dark:text-vivendi-white
            bg-operandi-white dark:bg-vivendi-black;
   }
 
   a {
-    @apply underline
-           text-operandi-blue-warmer
-           hover:bg-operandi-intense-blue
-           dark:text-vivendi-blue-warmer
-           dark:hover:bg-vivendi-intense-blue
-           transition-colors;
+    @apply underline transition-colors
+           text-operandi-blue-warmer dark:text-vivendi-blue-warmer
+           hover:bg-operandi-intense-blue dark:hover:bg-vivendi-intense-blue;
   }
 
   a[target="_blank"] {
@@ -181,14 +178,14 @@
   }
 
   h1 {
-    @apply text-3xl md:text-5xl text-balance font-serif font-medium
+    @apply text-3xl md:text-5xl text-balance font-medium
            text-operandi-black dark:text-vivendi-white;
   }
 
   h2,
   h3,
   h4 {
-    @apply mt-10 mb-4 text-2xl md:text-4xl font-serif font-medium;
+    @apply mt-10 mb-4 text-2xl md:text-4xl font-medium;
   }
 
   p {
@@ -199,16 +196,12 @@
     blockquote {
       @apply my-6 py-2 pl-6
              border-l-8 border-solid
-             border-operandi-blue-warmer
-             bg-operandi-nuanced-blue
-             dark:border-vivendi-blue-warmer
-             dark:bg-vivendi-nuanced-blue;
+             border-operandi-blue-warmer dark:border-vivendi-blue-warmer
+             bg-operandi-nuanced-blue dark:bg-vivendi-nuanced-blue;
     }
 
     code {
-      @apply text-sm font-mono
-             text-operandi-magenta-warmer
-             dark:text-vivendi-magenta-warmer;
+      @apply text-sm text-operandi-magenta-warmer dark:text-vivendi-magenta-warmer;
     }
 
     figure {
@@ -230,10 +223,11 @@
     h2,
     h3,
     h4 {
-      @apply font-serif flex items-center;
+      @apply flex items-center;
 
       .headline-hash {
-        @apply hidden border border-operandi-gray dark:border-vivendi-gray rounded-lg p-1;
+        @apply hidden rounded-lg p-1
+               border border-operandi-gray dark:border-vivendi-gray;
       }
 
       &:hover .headline-hash {
@@ -287,15 +281,12 @@
       @apply w-full text-sm;
 
       thead {
-        @apply border-b border-operandi-gray
-               dark:border-vivendi-gray;
+        @apply border-b border-operandi-gray dark:border-vivendi-gray;
       }
 
       th {
-        @apply py-2 px-4
-               text-left font-bold
-               text-operandi-black
-               dark:text-vivendi-white;
+        @apply py-2 px-4 text-left font-bold
+               text-operandi-black dark:text-vivendi-white;
       }
 
       th:not(:first-child):not(:last-child) {
@@ -307,9 +298,7 @@
       }
 
       td {
-        @apply py-2 px-4
-               text-operandi-black
-               dark:text-vivendi-white;
+        @apply py-2 px-4 text-operandi-black dark:text-vivendi-white;
       }
 
       td:not(:first-child):not(:last-child) {
@@ -321,11 +310,9 @@
       }
 
       tbody tr {
-        @apply border-b border-operandi-gray
-               dark:border-vivendi-gray
-               transition-colors
-               hover:bg-operandi-nuanced-cyan
-               dark:hover:bg-vivendi-nuanced-cyan;
+        @apply border-b transition-colors
+               border-operandi-gray dark:border-vivendi-gray
+               hover:bg-operandi-nuanced-cyan dark:hover:bg-vivendi-nuanced-cyan;
       }
 
       tbody tr:last-child {
