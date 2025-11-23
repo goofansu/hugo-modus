@@ -1,30 +1,36 @@
-/*! tailwindcss v4.0.6 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v4.1.17 | MIT License | https://tailwindcss.com */
+@layer properties {
+  @supports (((-webkit-hyphens: none)) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color: rgb(from red r g b)))) {
+    *, :before, :after, ::backdrop {
+      --tw-space-y-reverse: 0;
+      --tw-border-style: solid;
+      --tw-font-weight: initial;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-color: initial;
+      --tw-shadow-alpha: 100%;
+      --tw-inset-shadow: 0 0 #0000;
+      --tw-inset-shadow-color: initial;
+      --tw-inset-shadow-alpha: 100%;
+      --tw-ring-color: initial;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-inset-ring-color: initial;
+      --tw-inset-ring-shadow: 0 0 #0000;
+      --tw-ring-inset: initial;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-content: "";
+    }
+  }
+}
+
 @layer theme {
   :root, :host {
     --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --spacing: .25rem;
-    --breakpoint-sm: 40rem;
-    --breakpoint-md: 48rem;
-    --breakpoint-lg: 64rem;
-    --breakpoint-xl: 80rem;
-    --breakpoint-2xl: 96rem;
-    --container-3xs: 16rem;
-    --container-2xs: 18rem;
-    --container-xs: 20rem;
-    --container-sm: 24rem;
-    --container-md: 28rem;
-    --container-lg: 32rem;
-    --container-xl: 36rem;
-    --container-2xl: 42rem;
-    --container-3xl: 48rem;
     --container-4xl: 56rem;
-    --container-5xl: 64rem;
-    --container-6xl: 72rem;
-    --container-7xl: 80rem;
-    --text-xs: .75rem;
-    --text-xs--line-height: calc(1 / .75);
     --text-sm: .875rem;
     --text-sm--line-height: calc(1.25 / .875);
     --text-base: 1rem;
@@ -41,207 +47,44 @@
     --text-4xl--line-height: calc(2.5 / 2.25);
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
-    --text-6xl: 3.75rem;
-    --text-6xl--line-height: 1;
-    --text-7xl: 4.5rem;
-    --text-7xl--line-height: 1;
-    --text-8xl: 6rem;
-    --text-8xl--line-height: 1;
-    --text-9xl: 8rem;
-    --text-9xl--line-height: 1;
-    --font-weight-thin: 100;
-    --font-weight-extralight: 200;
-    --font-weight-light: 300;
-    --font-weight-normal: 400;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
-    --font-weight-extrabold: 800;
-    --font-weight-black: 900;
-    --tracking-tighter: -.05em;
-    --tracking-tight: -.025em;
-    --tracking-normal: 0em;
-    --tracking-wide: .025em;
-    --tracking-wider: .05em;
-    --tracking-widest: .1em;
-    --leading-tight: 1.25;
-    --leading-snug: 1.375;
-    --leading-normal: 1.5;
-    --leading-relaxed: 1.625;
-    --leading-loose: 2;
-    --radius-xs: .125rem;
-    --radius-sm: .25rem;
-    --radius-md: .375rem;
     --radius-lg: .5rem;
-    --radius-xl: .75rem;
     --radius-2xl: 1rem;
-    --radius-3xl: 1.5rem;
-    --radius-4xl: 2rem;
-    --shadow-2xs: 0 1px #0000000d;
-    --shadow-xs: 0 1px 2px 0 #0000000d;
-    --shadow-sm: 0 1px 3px 0 #0000001a, 0 1px 2px -1px #0000001a;
-    --shadow-md: 0 4px 6px -1px #0000001a, 0 2px 4px -2px #0000001a;
-    --shadow-lg: 0 10px 15px -3px #0000001a, 0 4px 6px -4px #0000001a;
-    --shadow-xl: 0 20px 25px -5px #0000001a, 0 8px 10px -6px #0000001a;
-    --shadow-2xl: 0 25px 50px -12px #00000040;
-    --inset-shadow-2xs: inset 0 1px #0000000d;
-    --inset-shadow-xs: inset 0 1px 1px #0000000d;
-    --inset-shadow-sm: inset 0 2px 4px #0000000d;
-    --drop-shadow-xs: 0 1px 1px #0000000d;
-    --drop-shadow-sm: 0 1px 2px #00000026;
-    --drop-shadow-md: 0 3px 3px #0000001f;
-    --drop-shadow-lg: 0 4px 4px #00000026;
-    --drop-shadow-xl: 0 9px 7px #0000001a;
-    --drop-shadow-2xl: 0 25px 25px #00000026;
-    --ease-in: cubic-bezier(.4, 0, 1, 1);
-    --ease-out: cubic-bezier(0, 0, .2, 1);
-    --ease-in-out: cubic-bezier(.4, 0, .2, 1);
-    --animate-spin: spin 1s linear infinite;
-    --animate-ping: ping 1s cubic-bezier(0, 0, .2, 1) infinite;
-    --animate-pulse: pulse 2s cubic-bezier(.4, 0, .6, 1) infinite;
-    --animate-bounce: bounce 1s infinite;
-    --blur-xs: 4px;
-    --blur-sm: 8px;
-    --blur-md: 12px;
-    --blur-lg: 16px;
-    --blur-xl: 24px;
-    --blur-2xl: 40px;
-    --blur-3xl: 64px;
-    --perspective-dramatic: 100px;
-    --perspective-near: 300px;
-    --perspective-normal: 500px;
-    --perspective-midrange: 800px;
-    --perspective-distant: 1200px;
-    --aspect-video: 16 / 9;
     --default-transition-duration: .15s;
     --default-transition-timing-function: cubic-bezier(.4, 0, .2, 1);
     --default-font-family: var(--font-sans);
-    --default-font-feature-settings: var(--font-sans--font-feature-settings);
-    --default-font-variation-settings: var(--font-sans--font-variation-settings);
     --default-mono-font-family: var(--font-mono);
-    --default-mono-font-feature-settings: var(--font-mono--font-feature-settings);
-    --default-mono-font-variation-settings: var(--font-mono--font-variation-settings);
     --color-operandi-white: #fff;
     --color-operandi-white-dim: #f0f0f0;
     --color-operandi-black: #000;
     --color-operandi-black-dim: #595959;
     --color-operandi-black-alt: #193668;
-    --color-operandi-red: #a60000;
-    --color-operandi-red-warmer: #972500;
-    --color-operandi-red-cooler: #a0132f;
-    --color-operandi-red-faint: #7f0000;
-    --color-operandi-red-intense: #d00000;
-    --color-operandi-green: #006800;
-    --color-operandi-green-warmer: #316500;
-    --color-operandi-green-cooler: #00663f;
-    --color-operandi-green-faint: #2a5045;
-    --color-operandi-green-intense: #008900;
-    --color-operandi-yellow: #6f5500;
-    --color-operandi-yellow-warmer: #884900;
-    --color-operandi-yellow-cooler: #7a4f2f;
     --color-operandi-yellow-faint: #624416;
-    --color-operandi-yellow-intense: olive;
-    --color-operandi-blue: #0031a9;
     --color-operandi-blue-warmer: #354fcf;
-    --color-operandi-blue-cooler: #0000b0;
     --color-operandi-blue-faint: #003497;
-    --color-operandi-blue-intense: #00f;
     --color-operandi-magenta: #721045;
     --color-operandi-magenta-warmer: #8f0075;
-    --color-operandi-magenta-cooler: #531ab6;
-    --color-operandi-magenta-faint: #7c318f;
-    --color-operandi-magenta-intense: #d2d;
-    --color-operandi-cyan: #005e8b;
-    --color-operandi-cyan-warmer: #3f578f;
-    --color-operandi-cyan-cooler: #005f5f;
-    --color-operandi-cyan-faint: #005077;
-    --color-operandi-cyan-intense: #089;
-    --color-operandi-rust: #8a290f;
-    --color-operandi-gold: #80601f;
-    --color-operandi-olive: #56692d;
-    --color-operandi-slate: #2f3f83;
-    --color-operandi-indigo: #4a3a8a;
-    --color-operandi-maroon: #731c52;
-    --color-operandi-pink: #7b435c;
     --color-operandi-gray: #e0e0e0;
-    --color-operandi-intense-red: #ff8f88;
-    --color-operandi-intense-green: #8adf80;
-    --color-operandi-intense-yellow: #f3d000;
     --color-operandi-intense-blue: #bfc9ff;
-    --color-operandi-intense-magenta: #dfa0f0;
-    --color-operandi-intense-cyan: #a4d5f9;
-    --color-operandi-subtle-red: #ffcfbf;
-    --color-operandi-subtle-green: #b3fabf;
-    --color-operandi-subtle-yellow: #fff576;
     --color-operandi-subtle-blue: #ccdfff;
-    --color-operandi-subtle-magenta: #fdf;
-    --color-operandi-subtle-cyan: #bfefff;
-    --color-operandi-nuanced-red: #fff1f0;
-    --color-operandi-nuanced-green: #ecf7ed;
-    --color-operandi-nuanced-yellow: #fff3da;
     --color-operandi-nuanced-blue: #f3f3ff;
-    --color-operandi-nuanced-magenta: #fdf0ff;
     --color-operandi-nuanced-cyan: #ebf6fa;
     --color-vivendi-white: #fff;
     --color-vivendi-white-dim: #989898;
     --color-vivendi-white-alt: #c6daff;
     --color-vivendi-black: #000;
     --color-vivendi-black-dim: #1e1e1e;
-    --color-vivendi-red: #ff5f59;
-    --color-vivendi-red-warmer: #ff6b55;
-    --color-vivendi-red-cooler: #ff7f9f;
-    --color-vivendi-red-faint: #ff9580;
-    --color-vivendi-red-intense: #ff5f5f;
-    --color-vivendi-green: #44bc44;
-    --color-vivendi-green-warmer: #70b900;
-    --color-vivendi-green-cooler: #00c06f;
-    --color-vivendi-green-faint: #88ca9f;
-    --color-vivendi-green-intense: #44df44;
-    --color-vivendi-yellow: #d0bc00;
-    --color-vivendi-yellow-warmer: #fec43f;
-    --color-vivendi-yellow-cooler: #dfaf7a;
     --color-vivendi-yellow-faint: #d2b580;
-    --color-vivendi-yellow-intense: #efef00;
-    --color-vivendi-blue: #2fafff;
     --color-vivendi-blue-warmer: #79a8ff;
-    --color-vivendi-blue-cooler: #00bcff;
     --color-vivendi-blue-faint: #82b0ec;
-    --color-vivendi-blue-intense: #338fff;
     --color-vivendi-magenta: #feacd0;
     --color-vivendi-magenta-warmer: #f78fe7;
-    --color-vivendi-magenta-cooler: #b6a0ff;
-    --color-vivendi-magenta-faint: #caa6df;
-    --color-vivendi-magenta-intense: #f6f;
-    --color-vivendi-cyan: #00d3d0;
-    --color-vivendi-cyan-warmer: #4ae2f0;
-    --color-vivendi-cyan-cooler: #6ae4b9;
-    --color-vivendi-cyan-faint: #9ac8e0;
-    --color-vivendi-cyan-intense: #00eff0;
-    --color-vivendi-rust: #db7b5f;
-    --color-vivendi-gold: #c0965b;
-    --color-vivendi-olive: #9cbd6f;
-    --color-vivendi-slate: #76afbf;
-    --color-vivendi-indigo: #9099d9;
-    --color-vivendi-maroon: #cf7fa7;
-    --color-vivendi-pink: #d09dc0;
     --color-vivendi-gray: #303030;
-    --color-vivendi-intense-red: #9d1f1f;
-    --color-vivendi-intense-green: #2f822f;
-    --color-vivendi-intense-yellow: #7a6100;
     --color-vivendi-intense-blue: #1640b0;
-    --color-vivendi-intense-magenta: #7030af;
-    --color-vivendi-intense-cyan: #2266ae;
-    --color-vivendi-subtle-red: #620f2a;
-    --color-vivendi-subtle-green: #00422a;
-    --color-vivendi-subtle-yellow: #4a4000;
     --color-vivendi-subtle-blue: #242679;
-    --color-vivendi-subtle-magenta: #552f5f;
-    --color-vivendi-subtle-cyan: #004065;
-    --color-vivendi-nuanced-red: #2c0614;
-    --color-vivendi-nuanced-green: #001904;
-    --color-vivendi-nuanced-yellow: #221000;
     --color-vivendi-nuanced-blue: #0f0e39;
-    --color-vivendi-nuanced-magenta: #230631;
     --color-vivendi-nuanced-cyan: #041529;
   }
 }
@@ -269,10 +112,6 @@
     font-feature-settings: var(--default-font-feature-settings, normal);
     font-variation-settings: var(--default-font-variation-settings, normal);
     -webkit-tap-highlight-color: transparent;
-  }
-
-  body {
-    line-height: inherit;
   }
 
   hr {
@@ -397,7 +236,18 @@
 
   ::placeholder {
     opacity: 1;
-    color: color-mix(in oklab, currentColor 50%, transparent);
+  }
+
+  @supports (not ((-webkit-appearance: -apple-pay-button))) or (contain-intrinsic-size: 1px) {
+    ::placeholder {
+      color: currentColor;
+    }
+
+    @supports (color: color-mix(in lab, red, red)) {
+      ::placeholder {
+        color: color-mix(in oklab, currentcolor 50%, transparent);
+      }
+    }
   }
 
   textarea {
@@ -457,6 +307,10 @@
     padding-block: 0;
   }
 
+  ::-webkit-calendar-picker-indicator {
+    line-height: 1;
+  }
+
   :-moz-ui-invalid {
     box-shadow: none;
   }
@@ -489,7 +343,7 @@
     color: var(--color-operandi-black);
   }
 
-  @media (width >= 48rem) {
+  @media (min-width: 48rem) {
     body {
       font-size: var(--text-lg);
       line-height: var(--tw-leading, var(--text-lg--line-height));
@@ -533,7 +387,6 @@
     content: var(--tw-content);
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
-    content: var(--tw-content);
     --tw-content: "↗";
     content: var(--tw-content);
   }
@@ -547,7 +400,7 @@
     color: var(--color-operandi-black);
   }
 
-  @media (width >= 48rem) {
+  @media (min-width: 48rem) {
     h1 {
       font-size: var(--text-5xl);
       line-height: var(--tw-leading, var(--text-5xl--line-height));
@@ -569,8 +422,8 @@
     font-weight: var(--font-weight-medium);
   }
 
-  @media (width >= 48rem) {
-    :is(h2, h3, h4) {
+  @media (min-width: 48rem) {
+    h2, h3, h4 {
       font-size: var(--text-4xl);
       line-height: var(--tw-leading, var(--text-4xl--line-height));
     }
@@ -588,8 +441,9 @@
     border-left-width: 8px;
     border-color: var(--color-operandi-blue-warmer);
     background-color: var(--color-operandi-nuanced-blue);
+    padding-inline: calc(var(--spacing) * 4);
     padding-block: calc(var(--spacing) * 2);
-    padding-left: calc(var(--spacing) * 6);
+    overflow-wrap: break-word;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -748,7 +602,7 @@
     display: none;
   }
 
-  @media (width >= 40rem) {
+  @media (min-width: 40rem) {
     article table th:not(:first-child):not(:last-child) {
       display: table-cell;
     }
@@ -774,7 +628,7 @@
     display: none;
   }
 
-  @media (width >= 40rem) {
+  @media (min-width: 40rem) {
     article table td:not(:first-child):not(:last-child) {
       display: table-cell;
     }
@@ -921,14 +775,14 @@
     gap: calc(var(--spacing) * 2);
   }
 
-  .gap-x-4 {
-    column-gap: calc(var(--spacing) * 4);
-  }
-
   :where(.space-y-4 > :not(:last-child)) {
     --tw-space-y-reverse: 0;
     margin-block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));
     margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
+  }
+
+  .gap-x-4 {
+    column-gap: calc(var(--spacing) * 4);
   }
 
   .gap-y-2 {
@@ -1075,7 +929,7 @@
     }
   }
 
-  @media (width >= 48rem) {
+  @media (min-width: 48rem) {
     .md\:flex-row {
       flex-direction: row;
     }
@@ -1117,37 +971,6 @@
   }
 }
 
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes ping {
-  75%, 100% {
-    opacity: 0;
-    transform: scale(2);
-  }
-}
-
-@keyframes pulse {
-  50% {
-    opacity: .5;
-  }
-}
-
-@keyframes bounce {
-  0%, 100% {
-    animation-timing-function: cubic-bezier(.8, 0, 1, 1);
-    transform: translateY(-25%);
-  }
-
-  50% {
-    animation-timing-function: cubic-bezier(0, 0, .2, 1);
-    transform: none;
-  }
-}
-
 @property --tw-space-y-reverse {
   syntax: "*";
   inherits: false;
@@ -1176,6 +999,12 @@
   inherits: false
 }
 
+@property --tw-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+
 @property --tw-inset-shadow {
   syntax: "*";
   inherits: false;
@@ -1185,6 +1014,12 @@
 @property --tw-inset-shadow-color {
   syntax: "*";
   inherits: false
+}
+
+@property --tw-inset-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
 }
 
 @property --tw-ring-color {

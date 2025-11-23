@@ -194,10 +194,11 @@
 
   article {
     blockquote {
-      @apply my-6 py-2 pl-6
+      @apply my-6 px-4 py-2
              border-l-8 border-solid
              border-operandi-blue-warmer dark:border-vivendi-blue-warmer
-             bg-operandi-nuanced-blue dark:bg-vivendi-nuanced-blue;
+             bg-operandi-nuanced-blue dark:bg-vivendi-nuanced-blue
+             wrap-break-word;
     }
 
     code {
