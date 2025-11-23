@@ -1,19 +1,8 @@
-<div class="flex justify-between items-center">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
   <a href="{{ .Site.Home }}"
      class="no-underline text-current hover:bg-transparent">
     {{ .Site.Title }}
   </a>
 
-  <nav>
-    <ul class="flex space-x-4">
-      {{ range .Site.Menus.main }}
-        <li>
-          <a href="{{ .URL }}"
-             class="no-underline text-current hover:bg-transparent">
-            {{ .Name }}
-          </a>
-        </li>
-      {{ end }}
-    </ul>
-  </nav>
+  {{ partial "section-indexes.html" . }}
 </div>

@@ -6,8 +6,6 @@
   {{ if le (len .Sections) 1 }}
     {{ partial "page-list.html" $pages }}
   {{ else }}
-    {{ partial "section-indexes.html" . }}
-
     <h2>Most recent 10 posts</h2>
     {{ $pages := first 10 $pages }}
     {{ partial "page-list.html" $pages }}

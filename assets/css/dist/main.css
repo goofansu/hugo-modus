@@ -852,10 +852,6 @@
     margin-bottom: calc(var(--spacing) * 2);
   }
 
-  .mb-3 {
-    margin-bottom: calc(var(--spacing) * 3);
-  }
-
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
   }
@@ -905,12 +901,16 @@
     grid-template-columns: fit-content(200px) 1fr;
   }
 
+  .flex-col {
+    flex-direction: column;
+  }
+
   .flex-wrap {
     flex-wrap: wrap;
   }
 
-  .items-center {
-    align-items: center;
+  .items-start {
+    align-items: flex-start;
   }
 
   .justify-between {
@@ -933,12 +933,6 @@
 
   .gap-y-2 {
     row-gap: calc(var(--spacing) * 2);
-  }
-
-  :where(.space-x-4 > :not(:last-child)) {
-    --tw-space-x-reverse: 0;
-    margin-inline-start: calc(calc(var(--spacing) * 4) * var(--tw-space-x-reverse));
-    margin-inline-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .truncate {
@@ -1076,6 +1070,16 @@
     }
   }
 
+  @media (width >= 48rem) {
+    .md\:flex-row {
+      flex-direction: row;
+    }
+
+    .md\:items-center {
+      align-items: center;
+    }
+  }
+
   @media (prefers-color-scheme: dark) {
     .dark\:border-vivendi-gray {
       border-color: var(--color-vivendi-gray);
@@ -1135,12 +1139,6 @@
 }
 
 @property --tw-space-y-reverse {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
-}
-
-@property --tw-space-x-reverse {
   syntax: "*";
   inherits: false;
   initial-value: 0;

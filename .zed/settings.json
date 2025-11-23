@@ -1,5 +1,16 @@
 {
   "enable_language_server": true,
+  "lsp": {
+    "vscode-css-language-server": {
+      "settings": {
+        "css": {
+          "lint": {
+            "unknownAtRules": "ignore"
+          }
+        }
+      }
+    }
+  },
   "languages": {
     "HTML": {
       "format_on_save": "off"
