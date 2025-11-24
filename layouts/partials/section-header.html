@@ -1,4 +1,11 @@
 <header>
   <h1>{{ .Title }}</h1>
-  <p>{{ .Description | markdownify }}</p>
+  <p>
+    {{ .Description | markdownify }}
+    {{ with .OutputFormats.Get "rss" }}
+      <a href="{{ .Permalink }}" class="no-underline text-operandi-red dark:text-vivendi-red">
+        [RSS feed]
+      </a>
+    {{ end }}
+  </p>
 </header>
