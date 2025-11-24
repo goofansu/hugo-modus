@@ -1,7 +1,7 @@
 {{ define "main" }}
   {{ partial "section-header.html" .}}
 
-  <ul>
+  <ul class="divide-y divide-dashed space-y-10">
     {{ range .Pages }}
       <li>
         {{ partial "article-item.html" . }}
