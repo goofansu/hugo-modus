@@ -185,7 +185,7 @@
   h2,
   h3,
   h4 {
-    @apply mt-10 mb-4 text-2xl md:text-4xl font-medium;
+    @apply mt-10 mb-4 font-medium;
   }
 
   p {
@@ -210,15 +210,15 @@
     }
 
     h2 {
-      @apply text-operandi-yellow-faint dark:text-vivendi-yellow-faint;
+      @apply text-2xl md:text-4xl text-operandi-yellow-faint dark:text-vivendi-yellow-faint;
     }
 
     h3 {
-      @apply text-operandi-blue-faint dark:text-vivendi-blue-faint;
+      @apply text-xl md:text-3xl  text-operandi-blue-faint dark:text-vivendi-blue-faint;
     }
 
     h4 {
-      @apply text-operandi-magenta dark:text-vivendi-magenta;
+      @apply text-lg md:text-2xl text-operandi-magenta dark:text-vivendi-magenta;
     }
 
     h2,
