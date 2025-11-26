@@ -171,7 +171,7 @@
   }
 
   body {
-    @apply text-base md:text-lg font-serif
+    @apply text-base md:text-lg font-serif leading-relaxed
            text-operandi-black dark:text-vivendi-white
            bg-operandi-white dark:bg-vivendi-black;
   }
@@ -183,23 +183,25 @@
   a {
     @apply text-operandi-blue-warmer dark:text-vivendi-blue-warmer
            hover:bg-operandi-intense-blue dark:hover:bg-vivendi-intense-blue
+           focus-visible:outline-2 focus-visible:outline-offset-2
+           focus-visible:outline-operandi-blue dark:focus-visible:outline-vivendi-blue
            transition-colors underline;
   }
 
   h1 {
-    @apply text-3xl md:text-5xl font-serif font-medium text-balance;
+    @apply text-3xl md:text-5xl font-serif font-medium text-balance leading-tight;
   }
 
   h2 {
-    @apply text-2xl md:text-4xl font-serif font-medium text-operandi-yellow-faint dark:text-vivendi-yellow-faint;
+    @apply text-2xl md:text-4xl font-serif font-medium leading-tight text-operandi-yellow-faint dark:text-vivendi-yellow-faint;
   }
 
   h3 {
-    @apply text-xl md:text-3xl font-serif font-medium text-operandi-blue-faint dark:text-vivendi-blue-faint;
+    @apply text-xl md:text-3xl font-serif font-medium leading-tight text-operandi-blue-faint dark:text-vivendi-blue-faint;
   }
 
   h4 {
-    @apply text-lg md:text-2xl font-serif font-medium text-operandi-magenta dark:text-vivendi-magenta;
+    @apply text-lg md:text-2xl font-serif font-medium leading-tight text-operandi-magenta dark:text-vivendi-magenta;
   }
 
   h2,
@@ -217,7 +219,19 @@
     @apply my-4;
   }
 
+  details summary {
+    @apply cursor-pointer;
+  }
+
   article {
+    > :first-child {
+      @apply mt-0;
+    }
+
+    > :last-child {
+      @apply mb-0;
+    }
+
     blockquote {
       @apply my-6 px-4 py-2
              border-l-8 border-solid
@@ -295,7 +309,8 @@
   }
 
   .chroma {
-    @apply my-4 p-4 overflow-x-auto rounded-lg;
+    @apply my-4 p-4 overflow-x-auto rounded-lg
+           bg-operandi-white-dim dark:bg-vivendi-black-dim;
   }
 
   .footnotes {
