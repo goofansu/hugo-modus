@@ -1,8 +1,8 @@
 {{ with .Params.state }}
-  <div class="text-sm mb-2">
+  <span title="{{ . }}" class="text-sm">
     {{- if eq . "seedling" -}}🌱 SEEDLING
     {{- else if eq . "budding" -}}🪷 BUDDING
     {{- else if eq . "evergreen" -}}🌲 EVERGREEN
     {{- end -}}
-  </div>
+  </span>
 {{ end }}

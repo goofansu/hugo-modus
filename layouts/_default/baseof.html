@@ -5,22 +5,16 @@
   </head>
   <body>
     <header>
-      <div class="mx-auto max-w-4xl px-4 py-2">
-        {{ partial "header.html" . }}
-      </div>
+      {{ partial "header.html" . }}
     </header>
 
-    <main class="my-10">
-      <div class="mx-auto max-w-4xl px-4">
-        {{ block "main" . }}
-        {{ end }}
-      </div>
+    <main class="mt-10">
+      {{ block "main" . }}
+      {{ end }}
     </main>
 
-    <footer>
-      <div class="mx-auto max-w-4xl p-4">
-        {{ partial "footer.html" . }}
-      </div>
+    <footer class="mt-10">
+      {{ partial "footer.html" . }}
     </footer>
 
     {{ if templates.Exists "partials/scripts.html" }}

@@ -2,17 +2,15 @@
                 border border-operandi-gray dark:border-vivendi-gray
                 shadow-xs hover:shadow-md transition-shadow">
   <header class="mb-4">
-    <h1 class="text-base font-semibold
-               text-operandi-black
-               dark:text-vivendi-white">
+    <h1 class="text-base md:text-lg font-sans font-medium">
       <a href="{{ .RelPermalink }}"
          class="no-underline text-current hover:bg-transparent">
         {{ .Title }}
       </a>
     </h1>
 
-    <time class="text-sm text-operandi-black-dim dark:text-vivendi-white-dim"
-          datetime="{{ .Date.Format "2006-01-02" }}">
+    <time datetime="{{ .Date.Format "2006-01-02" }}"
+          class="text-sm md:text-base text-operandi-black-dim dark:text-vivendi-white-dim">
       {{ .Date.Format "Jan 2, 2006" }}
     </time>
   </header>
@@ -20,18 +18,10 @@
   {{ .Content }}
 
   {{ with .Params.tags }}
-  <div class="mt-4">
-    <div class="flex flex-wrap gap-2">
+    <ul class="tag-list">
       {{ range . }}
-      <span class="px-2 py-1
-                   rounded-full
-                   text-sm
-                   text-operandi-black-alt bg-operandi-subtle-blue
-                   dark:text-vivendi-white-alt dark:bg-vivendi-subtle-blue">
-        #{{ . }}
-      </span>
+        <li class="tag-item">#{{ . }}</li>
       {{ end }}
-    </div>
-  </div>
+    </ul>
   {{ end }}
 </article>

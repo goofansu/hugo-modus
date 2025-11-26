@@ -3,7 +3,5 @@
     <a href="/series">Series</a>: {{ .Title }}
   </h1>
 
-  <div class="mt-6">
-    {{ partial "page-list.html" .Pages }}
-  </div>
+  {{ partial "page-list.html" .Pages }}
 {{ end }}

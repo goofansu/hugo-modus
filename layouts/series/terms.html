@@ -1,5 +1,8 @@
 {{ define "main" }}
-  {{ partial "section-header.html" . }}
+  <section>
+    {{ partial "section-header.html" . }}
+  </section>
+
   {{ range .Data.Terms.Alphabetical }}
     <h2>
       <a href="{{ .Page.RelPermalink }}">
