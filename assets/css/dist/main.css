@@ -568,13 +568,6 @@
     color: var(--color-operandi-magenta-warmer);
   }
 
-  @media (min-width: 48rem) {
-    article code {
-      font-size: var(--text-base);
-      line-height: var(--tw-leading, var(--text-base--line-height));
-    }
-  }
-
   @media (prefers-color-scheme: dark) {
     article code {
       color: var(--color-vivendi-magenta-warmer);

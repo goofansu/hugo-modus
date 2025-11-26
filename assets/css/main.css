@@ -276,7 +276,7 @@
     }
 
     code {
-      @apply text-sm md:text-base text-operandi-magenta-warmer dark:text-vivendi-magenta-warmer;
+      @apply text-sm text-operandi-magenta-warmer dark:text-vivendi-magenta-warmer;
     }
   }
 }
