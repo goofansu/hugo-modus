@@ -1,0 +1,14 @@
+{{ with .Date }}
+  <p class="text-sm md:text-base italic">
+    <span>Written on</span>
+    <time datetime="{{ .Format "2006-01-02" }}" class="font-medium">
+      {{ .Format "Jan 2, 2006" }}
+    </time>
+    {{ if and $.Lastmod (ne ($.Lastmod.Format "2006-01-02") (.Format "2006-01-02")) }}
+      <span>and updated on</span>
+      <time datetime="{{ $.Lastmod.Format "2006-01-02" }}" class="font-medium">
+        {{ $.Lastmod.Format "Jan 2, 2006" }}
+      </time>
+    {{ end }}
+  </p>
+{{ end }}

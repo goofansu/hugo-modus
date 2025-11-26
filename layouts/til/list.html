@@ -1,7 +1,9 @@
 {{ define "main" }}
-  {{ partial "section-header.html" . }}
+  <section>
+    {{ partial "section-header.html" . }}
+  </section>
 
-  <ul class="space-y-4">
+  <ul class="mt-8 space-y-4">
     {{ range .Pages }}
       <li>
         {{ partial "article-card.html" . }}

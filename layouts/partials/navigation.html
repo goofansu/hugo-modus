@@ -1,0 +1,19 @@
+{{ $menus := .Site.Menus.main }}
+{{ $sections := .Site.Sections.ByTitle }}
+{{ $currentIndex := 0 }}
+
+{{ range $sections }}
+  {{ if $currentIndex }} / {{ end }}
+  <a href="{{ .RelPermalink }}">
+    {{- .Title -}}
+  </a>
+  {{ $currentIndex = add $currentIndex 1 }}
+{{ end }}
+
+{{ range $menus }}
+  {{ if $currentIndex }} / {{ end }}
+  <a href="{{ .URL }}">
+    {{- .Name -}}
+  </a>
+  {{ $currentIndex = add $currentIndex 1 }}
+{{ end }}

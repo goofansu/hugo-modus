@@ -1,27 +1,18 @@
 <article>
-  <header class="my-4">
+  <header>
     {{ partial "state.html" . }}
 
-    <h1>{{ .Title }}</h1>
+    <h1 class="mt-1">
+      {{ .Title }}
+    </h1>
 
     {{ partial "translations.html" . }}
+    {{ partial "metadata.html" . }}
   </header>
 
   {{ partial "toc.html" . }}
-  {{ partial "headline-hash.html" .Content }}
 
-  {{ with .Date }}
-    <p class="article-meta">
-      <span>Written on</span>
-      <time datetime="{{ .Format "2006-01-02" }}">
-        {{ .Format "Jan 2, 2006" }}
-      </time>
-      {{ if and $.Lastmod (ne ($.Lastmod.Format "2006-01-02") (.Format "2006-01-02")) }}
-        <span>and updated on</span>
-        <time datetime="{{ $.Lastmod.Format "2006-01-02" }}">
-          {{ $.Lastmod.Format "Jan 2, 2006" }}
-        </time>
-      {{ end }}
-    </p>
-  {{ end }}
+  <div class="mt-8">
+    {{ partial "headline-hash.html" .Content }}
+  </div>
 </article>

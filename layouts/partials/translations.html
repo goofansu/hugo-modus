@@ -1,6 +1,6 @@
 {{ if .IsTranslated }}
-  <div class="border-l-2">
-    <ul class="ml-4 list-none">
+  <nav aria-label="Translations">
+    <ul>
       {{ range .Translations }}
         <li>
           {{ .Language.LanguageName }}:
@@ -8,5 +8,5 @@
         </li>
       {{ end }}
     </ul>
-  </div>
+  </nav>
 {{ end }}
