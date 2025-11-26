@@ -7,12 +7,14 @@
     </h1>
 
     {{ partial "translations.html" . }}
-    {{ partial "metadata.html" . }}
   </header>
 
-  {{ partial "toc.html" . }}
-
-  <div class="mt-8">
+  <div class="mt-10">
+    {{ partial "toc.html" . }}
     {{ partial "headline-hash.html" .Content }}
   </div>
+
+  <footer class="mt-10">
+    {{ partial "metadata.html" . }}
+  </footer>
 </article>
