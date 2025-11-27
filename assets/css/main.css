@@ -279,7 +279,7 @@
   }
 
   .tag-list {
-    @apply m-0 mt-4 list-none flex flex-wrap gap-2;
+    @apply m-0 mt-4 list-none flex-row flex-wrap gap-2;
   }
 
   .tag-item {
