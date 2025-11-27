@@ -9,10 +9,8 @@
     {{ partial "translations.html" . }}
   </header>
 
-  <div class="mt-10">
-    {{ partial "toc.html" . }}
-    {{ partial "headline-hash.html" .Content }}
-  </div>
+  {{ partial "toc.html" . }}
+  {{ partial "headline-hash.html" .Content }}
 
   <footer class="mt-10">
     {{ partial "metadata.html" . }}

@@ -168,6 +168,12 @@
            bg-operandi-white dark:bg-vivendi-black;
   }
 
+  a {
+    @apply text-operandi-blue-warmer dark:text-vivendi-blue-warmer
+           hover:bg-operandi-intense-blue dark:hover:bg-vivendi-intense-blue
+           transition-colors underline;
+  }
+
   h1,
   h2,
   h3,
@@ -202,30 +208,29 @@
   }
 
   p {
-    @apply mt-4;
-  }
-
-  a {
-    @apply text-operandi-blue-warmer dark:text-vivendi-blue-warmer
-           hover:bg-operandi-intense-blue dark:hover:bg-vivendi-intense-blue
-           transition-colors underline;
+    @apply my-4;
   }
 
   article {
+    @apply flex flex-col gap-4;
+
+    *:not(h2, h3, h4) {
+      @apply m-0;
+    }
+
+    :is(h2, h3, h4) + :is(h2, h3, h4) {
+      @apply mt-0;
+    }
+
     blockquote {
-      @apply mt-4 p-4
+      @apply p-4  wrap-break-word
              border-l-8 border-solid
              border-operandi-blue-warmer dark:border-vivendi-blue-warmer
-             bg-operandi-nuanced-blue dark:bg-vivendi-nuanced-blue
-             wrap-break-word;
-
-      p:first-child {
-        @apply m-0;
-      }
+             bg-operandi-nuanced-blue dark:bg-vivendi-nuanced-blue;
     }
 
     figure {
-      @apply mt-4 flex justify-center items-center;
+      @apply flex justify-center items-center;
     }
 
     h2,
@@ -243,10 +248,6 @@
       }
     }
 
-    :is(h1, h2, h3, h4) + :is(h2, h3, h4) {
-      @apply mt-4;
-    }
-
     ul {
       @apply list-disc;
     }
@@ -257,22 +258,7 @@
 
     ul,
     ol {
-      @apply mx-6 my-4;
-    }
-
-    li > ul,
-    li > ol {
-      @apply mt-0;
-    }
-
-    p:has(+ ul),
-    p:has(+ ol) {
-      @apply mb-1;
-    }
-
-    p + ul,
-    p + ol {
-      @apply mt-0;
+      @apply mx-6 flex flex-col gap-2;
     }
 
     code {
@@ -282,18 +268,14 @@
 }
 
 @layer components {
-  #TableOfContents {
-    ul {
-      @apply my-1;
-    }
-  }
-
   .chroma {
-    @apply my-4 p-4 overflow-x-auto rounded-lg;
+    @apply p-4 overflow-x-auto rounded-lg;
   }
 
   .footnotes {
-    @apply mt-10;
+    hr {
+      @apply my-4;
+    }
   }
 
   .tag-list {
