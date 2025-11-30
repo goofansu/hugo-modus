@@ -5,13 +5,17 @@
       {{ with .PrevInSection }}
         <li>
           <span>Previous:</span>
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          <a href="{{ .RelPermalink }}">
+            {{ .Title }}
+          </a>
         </li>
       {{ end }}
       {{ with .NextInSection }}
         <li>
           <span>Next:</span>
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          <a href="{{ .RelPermalink }}">
+            {{ .Title }}
+          </a>
         </li>
       {{ end }}
     </ul>

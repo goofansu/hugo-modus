@@ -5,7 +5,7 @@
 {{ range $sections }}
   {{ if $currentIndex }}/{{ end }}
   <a href="{{ .RelPermalink }}">
-    {{- .Title -}}
+    {{ .Title }}
   </a>
   {{ $currentIndex = add $currentIndex 1 }}
 {{ end }}
@@ -13,7 +13,7 @@
 {{ range $menus }}
   {{ if $currentIndex }}/{{ end }}
   <a href="{{ .URL }}">
-    {{- .Name -}}
+    {{ .Name }}
   </a>
   {{ $currentIndex = add $currentIndex 1 }}
 {{ end }}

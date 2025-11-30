@@ -5,6 +5,6 @@
 <p>
   {{ .Description | markdownify }}
   {{ with .OutputFormats.Get "rss" }}
-    <a href="{{ .Permalink }}" class="feed-link">[RSS feed]</a>
+    <a href="{{ .Permalink }}" class="feed-link"> [RSS feed] </a>
   {{ end }}
 </p>
