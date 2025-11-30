@@ -1,6 +1,6 @@
 {{ if or .PrevInSection .NextInSection }}
   <nav>
-    <hr class="my-10 border-dashed">
+    <hr class="my-10 border-dashed" />
     <ul class="space-y-4">
       {{ with .PrevInSection }}
         <li>
@@ -8,7 +8,6 @@
           <a href="{{ .RelPermalink }}">{{ .Title }}</a>
         </li>
       {{ end }}
-
       {{ with .NextInSection }}
         <li>
           <span>Next:</span>

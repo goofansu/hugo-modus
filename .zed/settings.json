@@ -13,7 +13,20 @@
   },
   "languages": {
     "HTML": {
-      "format_on_save": "off"
+      "prettier": {
+        "allowed": true,
+        "plugins": [
+          "prettier-plugin-go-template",
+          "prettier-plugin-tailwindcss"
+        ],
+        "parser": "go-template"
+      }
+    },
+    "CSS": {
+      "prettier": {
+        "allowed": true,
+        "plugins": ["prettier-plugin-tailwindcss"]
+      }
     }
   }
 }

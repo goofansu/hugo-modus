@@ -162,16 +162,11 @@
 
 @layer base {
   body {
-    @apply m-0 p-4 md:mx-auto md:max-w-4xl md:my-4
-           text-base md:text-lg font-sans
-           text-operandi-black dark:text-vivendi-white
-           bg-operandi-white dark:bg-vivendi-black;
+    @apply text-operandi-black dark:text-vivendi-white bg-operandi-white dark:bg-vivendi-black m-0 p-4 font-sans text-base md:mx-auto md:my-4 md:max-w-4xl md:text-lg;
   }
 
   a {
-    @apply text-operandi-blue-warmer dark:text-vivendi-blue-warmer
-           hover:bg-operandi-intense-blue dark:hover:bg-vivendi-intense-blue
-           transition-colors underline;
+    @apply text-operandi-blue-warmer dark:text-vivendi-blue-warmer hover:bg-operandi-intense-blue dark:hover:bg-vivendi-intense-blue underline transition-colors;
   }
 
   h1,
@@ -192,19 +187,19 @@
   }
 
   h1 {
-    @apply text-3xl md:text-5xl text-operandi-black dark:text-vivendi-white;
+    @apply text-operandi-black dark:text-vivendi-white text-3xl md:text-5xl;
   }
 
   h2 {
-    @apply mt-10 text-2xl md:text-4xl text-operandi-yellow-faint dark:text-vivendi-yellow-faint;
+    @apply text-operandi-yellow-faint dark:text-vivendi-yellow-faint mt-10 text-2xl md:text-4xl;
   }
 
   h3 {
-    @apply mt-8 text-xl md:text-3xl text-operandi-blue-faint dark:text-vivendi-blue-faint;
+    @apply text-operandi-blue-faint dark:text-vivendi-blue-faint mt-8 text-xl md:text-3xl;
   }
 
   h4 {
-    @apply mt-6 text-lg md:text-2xl text-operandi-magenta dark:text-vivendi-magenta;
+    @apply text-operandi-magenta dark:text-vivendi-magenta mt-6 text-lg md:text-2xl;
   }
 
   p {
@@ -223,14 +218,11 @@
     }
 
     blockquote {
-      @apply p-4  wrap-break-word
-             border-l-8 border-solid
-             border-operandi-blue-warmer dark:border-vivendi-blue-warmer
-             bg-operandi-nuanced-blue dark:bg-vivendi-nuanced-blue;
+      @apply border-operandi-blue-warmer dark:border-vivendi-blue-warmer bg-operandi-nuanced-blue dark:bg-vivendi-nuanced-blue border-l-8 border-solid p-4 wrap-break-word;
     }
 
     figure {
-      @apply flex justify-center items-center;
+      @apply flex items-center justify-center;
     }
 
     h2,
@@ -239,8 +231,7 @@
       @apply flex items-center;
 
       .headline-hash {
-        @apply hidden rounded-lg p-1
-               border border-operandi-gray dark:border-vivendi-gray;
+        @apply border-operandi-gray dark:border-vivendi-gray hidden rounded-lg border p-1;
       }
 
       &:hover .headline-hash {
@@ -262,14 +253,14 @@
     }
 
     code {
-      @apply text-sm text-operandi-magenta-warmer dark:text-vivendi-magenta-warmer;
+      @apply text-operandi-magenta-warmer dark:text-vivendi-magenta-warmer text-sm;
     }
   }
 }
 
 @layer components {
   .chroma {
-    @apply p-4 overflow-x-auto rounded-lg;
+    @apply overflow-x-auto rounded-lg p-4;
   }
 
   .footnotes {
@@ -283,16 +274,14 @@
   }
 
   .tag-item {
-    @apply px-2 py-1 text-sm rounded-full
-           text-operandi-black-alt dark:text-vivendi-white-alt
-           bg-operandi-subtle-blue dark:bg-vivendi-subtle-blue;
+    @apply text-operandi-black-alt dark:text-vivendi-white-alt bg-operandi-subtle-blue dark:bg-vivendi-subtle-blue rounded-full px-2 py-1 text-sm;
   }
 
   .feed-link {
-    @apply no-underline text-operandi-red dark:text-vivendi-red;
+    @apply text-operandi-red dark:text-vivendi-red no-underline;
   }
 
   .navbar-brand {
-    @apply no-underline text-xl md:text-2xl text-current hover:bg-transparent;
+    @apply text-xl text-current no-underline hover:bg-transparent md:text-2xl;
   }
 }

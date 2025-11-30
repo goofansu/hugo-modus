@@ -1,8 +1,11 @@
 {{ with .Params.state }}
   <span title="{{ . }}" class="text-sm">
-    {{- if eq . "seedling" -}}🌱 SEEDLING
-    {{- else if eq . "budding" -}}🪷 BUDDING
-    {{- else if eq . "evergreen" -}}🌲 EVERGREEN
+    {{- if eq . "seedling" -}}
+      🌱 SEEDLING
+    {{- else if eq . "budding" -}}
+      🪷 BUDDING
+    {{- else if eq . "evergreen" -}}
+      🌲 EVERGREEN
     {{- end -}}
   </span>
 {{ end }}
