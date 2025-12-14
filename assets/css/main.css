@@ -222,7 +222,11 @@
     }
 
     figure {
-      @apply flex items-center justify-center;
+      @apply flex flex-col items-center;
+
+      figcaption {
+        @apply font-serif text-sm;
+      }
     }
 
     h2,
