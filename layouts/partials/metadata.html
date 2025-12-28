@@ -11,4 +11,10 @@
       </time>
     {{ end }}
   </p>
+  {{ with $.OutputFormats.Get "markdown" }}
+    <p class="text-sm italic md:text-base">
+      View
+      <a href="{{ .RelPermalink }}">markdown</a>
+    </p>
+  {{ end }}
 {{ end }}
