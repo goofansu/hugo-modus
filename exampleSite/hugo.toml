@@ -1,7 +1,7 @@
 baseURL = "https://hugo-modus.yejun.dev/"
 title = "hugo-modus"
 copyright = "&copy; 2025"
-defaultContentLanguage = 'en'
+defaultContentLanguage = "en"
 enableRobotsTXT = false
 
 [params]
@@ -26,8 +26,11 @@ description = "An opinionated Hugo theme using the [colour palette of the Modus 
 
 [languages]
   [languages.en]
-    languageName = 'English'
+    languageName = "English"
     weight = 10
   [languages.zh]
-    languageName = '中文'
+    languageName = "中文"
     weight = 20
+
+[outputs]
+  page = ["html", "markdown"]
